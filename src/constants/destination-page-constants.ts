@@ -1,49 +1,12 @@
 // Types
-
-type DestinationHeroSectionTypes = {
+export type DestinationHeroSectionTypes = {
   // heroImg: string;
   heroTitle: string;
   heroDescription: string;
   heroBtn: string;
 };
 
-type NatureSectionTypes = {
-  // natureImg: string;
-  natureTitle: string;
-  natureDescription: string;
-};
-
-type CultureSectionTypes = {
-  // cultureImg: string;
-  cultureTitle: string;
-  cultureDescription: string;
-};
-
-type DestinationEvenementSectionTypes = {
-  // evenementImg: string;
-  evenementTitle: string;
-  evenementDescription: string;
-};
-
-type GastronomySectionTypes = {
-  // gastronomyImg: string;
-  gastronomyTitle: string;
-  gastronomyDescription: string;
-};
-
-type AdventureSectionTypes = {
-  // adventureImg: string;
-  adventureTitle: string;
-  adventureDescription: string;
-};
-
-type NocturneSectionTypes = {
-  // nocturneImg: string;
-  nocturneTitle: string;
-  nocturneDescription: string;
-};
-
-type CardsTypes = {
+export type CardsTypes = {
   id: number;
   // cardImg: string;
   cardTitle: string;
@@ -51,6 +14,7 @@ type CardsTypes = {
   cardBtn: string;
 }[];
 
+// Hero Section
 const destinationHeroSection: DestinationHeroSectionTypes = {
   // heroImg: ,
   heroTitle:
@@ -60,18 +24,10 @@ const destinationHeroSection: DestinationHeroSectionTypes = {
   heroBtn: "Planifiez votre visite",
 };
 
-// Nature Section
-const natureSection: NatureSectionTypes = {
-  natureTitle:
-    "Détendez-vous sur les plages paradisiaques et découvrez la nature sauvage de Conakry.",
-  natureDescription:
-    "Conakry est entourée par des plages époustouflantes et des paysages naturels à couper le souffle. Que ce soit pour une journée de farniente ou une excursion à travers les îles environnantes, vous serez charmé par la beauté naturelle de la région.",
-  // natureImg: ,
-};
-
+// Nature
 const natureCards: CardsTypes = [
   {
-    id: 0,
+    id: 10,
     // cardImg: ,
     cardTitle: "Plages de Rogbané",
     cardDescription:
@@ -79,7 +35,7 @@ const natureCards: CardsTypes = [
     cardBtn: "Visiter",
   },
   {
-    id: 1,
+    id: 11,
     // cardImg: ,
     cardTitle: "Îles de Kassa",
     cardDescription:
@@ -87,7 +43,7 @@ const natureCards: CardsTypes = [
     cardBtn: "Visiter",
   },
   {
-    id: 2,
+    id: 12,
     // cardImg: ,
     cardTitle: "Jardin Botanique de Conakry",
     cardDescription:
@@ -96,18 +52,10 @@ const natureCards: CardsTypes = [
   },
 ];
 
-// Culture Section
-const cultureSection: CultureSectionTypes = {
-  // cultureImg: ,
-  cultureTitle:
-    "Plongez dans l'histoire riche et les traditions vivantes de Conakry.",
-  cultureDescription:
-    "De son passé colonial à sa culture contemporaine, Conakry regorge de trésors historiques et culturels. Que vous soyez passionné par l’histoire ou curieux des traditions guinéennes, vous trouverez de quoi éveiller votre curiosité",
-};
-
+// Culture
 const cultureCards: CardsTypes = [
   {
-    id: 11,
+    id: 21,
     // cardImg: ,
     cardTitle: "Musée National de Sandervalia",
     cardDescription:
@@ -115,14 +63,14 @@ const cultureCards: CardsTypes = [
     cardBtn: "Visiter",
   },
   {
-    id: 12,
+    id: 22,
     // cardImg: ,
     cardTitle: "Monument aux Martyrs",
     cardDescription: "Un hommage aux héros de l'indépendance guinéenne.",
     cardBtn: "Visiter",
   },
   {
-    id: 13,
+    id: 23,
     // cardImg: ,
     cardTitle: "Grand Marché de Madina",
     cardDescription:
@@ -131,18 +79,10 @@ const cultureCards: CardsTypes = [
   },
 ];
 
-// Evenement Section
-const destinationEvenementSection: DestinationEvenementSectionTypes = {
-  // evenementImg: ,
-  evenementTitle:
-    "Participez aux festivals et célébrations qui font vibrer Conakry tout au long de l'année.",
-  evenementDescription:
-    "Conakry est une ville vivante avec une scène culturelle dynamique. Chaque année, de nombreux événements et festivals célèbrent la musique, l’art, et les traditions guinéennes. Ne manquez pas ces moments uniques où la ville s’anime comme jamais.",
-};
-
+// Evenement
 const destinationEvenementCards: CardsTypes = [
   {
-    id: 21,
+    id: 31,
     // cardImg: ,
     cardTitle: "Festival National des Arts",
     cardDescription:
@@ -150,7 +90,7 @@ const destinationEvenementCards: CardsTypes = [
     cardBtn: "Visiter",
   },
   {
-    id: 22,
+    id: 32,
     // cardImg: ,
     cardTitle: "Le Marathon de Conakry",
     cardDescription:
@@ -158,7 +98,7 @@ const destinationEvenementCards: CardsTypes = [
     cardBtn: "Visiter",
   },
   {
-    id: 23,
+    id: 33,
     // cardImg: ,
     cardTitle: "La Fête de l'Indépendance (2 octobre)",
     cardDescription:
@@ -167,18 +107,10 @@ const destinationEvenementCards: CardsTypes = [
   },
 ];
 
-// Gastronomy Section
-const gastronomySection: GastronomySectionTypes = {
-  // gastronomyImg: ,
-  gastronomyTitle:
-    "Savourez les saveurs uniques de Conakry, des plats traditionnels aux spécialités de la mer.",
-  gastronomyDescription:
-    "La cuisine de Conakry est un reflet de ses influences culturelles diverses. Goûtez aux plats locaux comme le poulet yassa, le riz jollof, ou savourez des fruits de mer fraîchement pêchés dans les restaurants du bord de mer.",
-};
-
+// Gastronomy
 const gastronomyCards: CardsTypes = [
   {
-    id: 31,
+    id: 41,
     // cardImg: ,
     cardTitle: "Restaurants de Conakry",
     cardDescription:
@@ -186,7 +118,7 @@ const gastronomyCards: CardsTypes = [
     cardBtn: "En savoir plus",
   },
   {
-    id: 32,
+    id: 42,
     // cardImg: ,
     cardTitle: "Cuisine de rue",
     cardDescription:
@@ -194,7 +126,7 @@ const gastronomyCards: CardsTypes = [
     cardBtn: "En savoir plus",
   },
   {
-    id: 33,
+    id: 43,
     // cardImg: ,
     cardTitle: "Spécialités culinaires",
     cardDescription: "",
@@ -202,18 +134,10 @@ const gastronomyCards: CardsTypes = [
   },
 ];
 
-// Adventure Section
-const adventureSection: AdventureSectionTypes = {
-  // adventureImg: ,
-  adventureTitle:
-    "Vivez des expériences uniques entre nature, aventure et découvertes à Conakry.",
-  adventureDescription:
-    "Conakry offre des activités variées pour les amateurs d'aventure. Que vous soyez en quête de randonnées, de sports nautiques ou d’exploration, la ville et ses environs vous offrent de multiples opportunités de loisirs",
-};
-
+// Adventure
 const adventureCards: CardsTypes = [
   {
-    id: 41,
+    id: 51,
     // cardImg: ,
     cardTitle: "Randonnée sur l’île de Roume",
     cardDescription:
@@ -221,7 +145,7 @@ const adventureCards: CardsTypes = [
     cardBtn: "Visiter",
   },
   {
-    id: 42,
+    id: 52,
     // cardImg: ,
     cardTitle: "Kayak et sports nautiques",
     cardDescription:
@@ -229,7 +153,7 @@ const adventureCards: CardsTypes = [
     cardBtn: "Visiter",
   },
   {
-    id: 43,
+    id: 53,
     // cardImg: ,
     cardTitle: "Excursion au Mont Kakoulima",
     cardDescription:
@@ -238,53 +162,94 @@ const adventureCards: CardsTypes = [
   },
 ];
 
-// Nocturne Section
-const nocturneSection: NocturneSectionTypes = {
-  // nocturneImg: ,
-  nocturneTitle: "Vie nocturne et divertissement",
-  nocturneDescription:
-    "Découvrez la vie nocturne animée de Conakry, des bars branchés aux boîtes de nuit traditionnelles.",
-};
-
+// Nocturne
 const nocturneCards: CardsTypes = [
   {
-    id: 51,
+    id: 61,
     // cardImg: ,
     cardTitle: "Bars en bord de plage",
     cardDescription:
       "Profitez d'une ambiance détendue avec des cocktails et de la musique en direct.",
-    cardBtn: "Visiter",
+    cardBtn: "En savoir plus",
   },
   {
-    id: 52,
+    id: 62,
     // cardImg: ,
     cardTitle: "Clubs de musique live",
     cardDescription:
       "Écoutez des groupes locaux et des performances de musique guinéenne traditionnelle. ",
-    cardBtn: "Visiter",
+    cardBtn: "En savoir plus",
   },
   {
-    id: 53,
+    id: 63,
     // cardImg: ,
     cardTitle: "Soirées DJ dans les clubs",
     cardDescription:
       "Les lieux les plus branchés pour danser toute la nuit au rythme de la musique moderne.",
-    cardBtn: "Visiter",
+    cardBtn: "En savoir plus",
   },
 ];
 
-export {
-  destinationHeroSection,
-  natureSection,
-  natureCards,
-  cultureSection,
-  cultureCards,
-  destinationEvenementSection,
-  destinationEvenementCards,
-  gastronomySection,
-  gastronomyCards,
-  adventureSection,
-  adventureCards,
-  nocturneSection,
-  nocturneCards,
-};
+const destinationContents = [
+  {
+    id: 0,
+    classNames: "nature",
+    title:
+      "Détendez-vous sur les plages paradisiaques et découvrez la nature sauvage de Conakry.",
+    description:
+      "Conakry est entourée par des plages époustouflantes et des paysages naturels à couper le souffle. Que ce soit pour une journée de farniente ou une excursion à travers les îles environnantes, vous serez charmé par la beauté naturelle de la région.",
+    // img: ,
+    cards: natureCards,
+  },
+  {
+    id: 2,
+    classNames: "culture",
+    title:
+      "Plongez dans l'histoire riche et les traditions vivantes de Conakry.",
+    description:
+      "De son passé colonial à sa culture contemporaine, Conakry regorge de trésors historiques et culturels. Que vous soyez passionné par l’histoire ou curieux des traditions guinéennes, vous trouverez de quoi éveiller votre curiosité",
+    // img: ,
+    cards: cultureCards,
+  },
+  {
+    id: 3,
+    classNames: "evenement",
+    title:
+      "Participez aux festivals et célébrations qui font vibrer Conakry tout au long de l'année.",
+    description:
+      "Conakry est une ville vivante avec une scène culturelle dynamique. Chaque année, de nombreux événements et festivals célèbrent la musique, l’art, et les traditions guinéennes. Ne manquez pas ces moments uniques où la ville s’anime comme jamais.",
+    // img: ,
+    cards: destinationEvenementCards,
+  },
+  {
+    id: 4,
+    classNames: "gastronomy",
+    title:
+      "Savourez les saveurs uniques de Conakry, des plats traditionnels aux spécialités de la mer.",
+    description:
+      "La cuisine de Conakry est un reflet de ses influences culturelles diverses. Goûtez aux plats locaux comme le poulet yassa, le riz jollof, ou savourez des fruits de mer fraîchement pêchés dans les restaurants du bord de mer.",
+    // img: ,
+    cards: gastronomyCards,
+  },
+  {
+    id: 5,
+    classNames: "adventure",
+    title:
+      "Vivez des expériences uniques entre nature, aventure et découvertes à Conakry.",
+    description:
+      "Conakry offre des activités variées pour les amateurs d'aventure. Que vous soyez en quête de randonnées, de sports nautiques ou d’exploration, la ville et ses environs vous offrent de multiples opportunités de loisirs",
+    // img: ,
+    cards: adventureCards,
+  },
+  {
+    id: 6,
+    classNames: "nocturne",
+    title: "Vie nocturne et divertissement",
+    description:
+      "Découvrez la vie nocturne animée de Conakry, des bars branchés aux boîtes de nuit traditionnelles.",
+    // img: ,
+    cards: nocturneCards,
+  },
+];
+
+export { destinationHeroSection, destinationContents };
