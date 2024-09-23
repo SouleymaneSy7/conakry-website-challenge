@@ -1,5 +1,12 @@
+import React from "react";
+import ContactMain from "@/components/ContactMain";
+
 const Contacts = () => {
-  return <div>Contacts</div>;
+  return (
+    <React.Fragment>
+      <ContactMain />
+    </React.Fragment>
+  );
 };
 
 export default Contacts;
