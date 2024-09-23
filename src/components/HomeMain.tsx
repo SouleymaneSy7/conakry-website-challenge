@@ -1,4 +1,5 @@
 import Container from "./Container";
+import HomeMainCommuneSection from "./HomeMainCommuneSection";
 import HomeMainDiscoverSection from "./HomeMainDiscoverSection";
 import HomeMainExploreSection from "./HomeMainExploreSection";
 
@@ -7,6 +8,7 @@ const HomeMain = () => {
     <Container as="main" className="discover">
       <HomeMainExploreSection />
       <HomeMainDiscoverSection />
+      <HomeMainCommuneSection />
     </Container>
   );
 };
