@@ -1,7 +1,12 @@
-import React from "react";
+import Container from "./Container";
+import HomeMainExploreSection from "./HomeMainExploreSection";
 
 const HomeMain = () => {
-  return <div>HomeMain</div>;
+  return (
+    <Container as="main">
+      <HomeMainExploreSection />
+    </Container>
+  );
 };
 
 export default HomeMain;
