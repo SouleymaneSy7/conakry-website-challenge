@@ -2,9 +2,9 @@
 
 .grid-columns {
   display: grid;
-  gap: var(--grid-gap, $grid-gap);
+  // gap: var(--grid-gap, $grid-gap);
 
-  @include media-queries(medium) {
+  @include media-queries(md) {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
