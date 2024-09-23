@@ -1,0 +1,12 @@
+@use "../abstracts/" as *;
+
+.grid-auto-fill {
+  --card-width: #{$card-width};
+
+  display: grid;
+  gap: var(--grid-gap, $grid-gap);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(var(--card-width), 100%), 1fr)
+  );
+}

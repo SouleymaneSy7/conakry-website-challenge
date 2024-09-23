@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.grid-columns {
+  display: grid;
+  gap: var(--grid-gap, $grid-gap);
+
+  @include media-queries(medium) {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}

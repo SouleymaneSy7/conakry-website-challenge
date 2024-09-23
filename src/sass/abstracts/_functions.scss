@@ -1,0 +1,22 @@
+@use "sass:math";
+@use "sass:map";
+@use "colors" as *;
+@use "typography" as *;
+@use "sizes" as *;
+
+// Pixel to rem function
+@function rem($px) {
+  $rems: math.div($px, 16px) * 1rem;
+  @return $rems;
+}
+
+// Colors Function
+@function custom-color($key) {
+  @return map-get($colors, $key);
+}
+
+// Spacing Function
+// retrieve spacing from $spacing-sizes map ie. `spacing(3)`
+@function spacing($size) {
+  @return map-get($spacing-sizes, $size);
+}
