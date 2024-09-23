@@ -7,6 +7,12 @@ type FAQTypes = {
   }[];
 };
 
+const contactIntro = {
+  title: "Nous contacter!",
+  description:
+    "Nous sommes là pour répondre à toutes vos questions ou demandes.N'hésitez pas à nous contacter.",
+};
+
 const FAQ: FAQTypes = {
   faqTitle: "Foire aux Questions (FAQ)",
   faqContents: [
@@ -50,4 +56,4 @@ const FAQ: FAQTypes = {
   ],
 };
 
-export { FAQ };
+export { contactIntro, FAQ };
