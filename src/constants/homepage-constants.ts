@@ -1,7 +1,8 @@
 // Types
-type NavBarListTypes = {
+export type NavBarListTypes = {
   id: number;
   navBarListElementTitle: string;
+  navBarListElementPath: string;
 }[];
 
 type HeroSectionTypes = {
@@ -68,18 +69,22 @@ const navBarList: NavBarListTypes = [
   {
     id: 0,
     navBarListElementTitle: "Accueil",
+    navBarListElementPath: "/",
   },
   {
     id: 1,
     navBarListElementTitle: "Destination",
+    navBarListElementPath: "/destination",
   },
   {
-    id: 0,
+    id: 2,
     navBarListElementTitle: "Histoire",
+    navBarListElementPath: "/history",
   },
   {
-    id: 0,
+    id: 3,
     navBarListElementTitle: "Contactez-nous",
+    navBarListElementPath: "/contacts",
   },
 ];
 
