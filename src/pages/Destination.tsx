@@ -1,5 +1,12 @@
+import DestinationMain from "@/components/DestinationMain";
+import React from "react";
+
 const Destination = () => {
-  return <div>Destination</div>;
+  return (
+    <React.Fragment>
+      <DestinationMain />
+    </React.Fragment>
+  );
 };
 
 export default Destination;
