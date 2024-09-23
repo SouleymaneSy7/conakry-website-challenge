@@ -5,45 +5,45 @@ export type NavBarListTypes = {
   navBarListElementPath: string;
 }[];
 
-type HeroSectionTypes = {
+export type HeroSectionTypes = {
   heroTitle: string;
   heroBtnText: string;
 };
 
-type ExplorerSectionType = {
+export type ExploreSectionType = {
   explorerTitle: string;
   explorerDescription: string;
 };
 
-type ExplorerCardsTypes = {
+export type ExploreCardsTypes = {
   id: number;
   cardTitle: string;
   cardDescription: string;
   cardBtn: string;
 }[];
 
-type DecouvrerSectionTypes = {
-  decouvrerTitle: string;
-  decouverDescription: string;
+export type discoverSectionTypes = {
+  discoverTitle: string;
+  discoverDescription: string;
 };
 
-type CommuneSectionTypes = {
+export type CommuneSectionTypes = {
   communeTitle: string;
   communeDescription: string;
 };
 
-type CommuneSliderTypes = {
+export type CommuneSliderTypes = {
   id: number;
   sliderTitle: string;
   sliderDescription: string;
 }[];
 
-type EvenementSectionTypes = {
+export type EvenementSectionTypes = {
   evenementTitle: string;
   evenementDescription: string;
 };
 
-type EvenementCardsType = {
+export type EvenementCardsType = {
   id: number;
   evenementCardTitle: string;
   evenementCardDate: string;
@@ -51,13 +51,13 @@ type EvenementCardsType = {
   evenementCardBtn: string;
 }[];
 
-type FooterLinksTypes = {
+export type FooterLinksTypes = {
   id: number;
   linkTitle: string;
   linkList: string[];
 }[];
 
-type FooterNewsletterTypes = {
+export type FooterNewsletterTypes = {
   newsletterTitle: string;
   newsletterDescription: string;
   newsletterInputPlaceholder: string;
@@ -98,16 +98,24 @@ const heroSection: HeroSectionTypes = {
   // heroImage: heroImg,
 };
 
-// Explorer Section
-const explorerSection: ExplorerSectionType = {
+// Explore Section
+const exploreSection: ExploreSectionType = {
   explorerTitle: "Explorer des Endroits",
   explorerDescription:
     "Conakry regorge de lieux à explorer. Partez à la découverte de ces endroits et laissez-vous surprendre par la diversité de la ville.",
 };
 
-const explorerCards: ExplorerCardsTypes = [
+const exploreCards: ExploreCardsTypes = [
   {
     id: 11,
+    // cardImage: ,
+    cardTitle: "Îles de Loos",
+    cardDescription:
+      "L'archipel comprend trois îles : Tamara 'la sauvage', Room 'la tranquille' et Kassa 'la fêtarde'. Trois îles qu'il faut prendre le temps de découvrir tant leur beauté sauvage est préservée et la pêche, leur atout principal.",
+    cardBtn: "Visiter",
+  },
+  {
+    id: 12,
     // cardImage: ,
     cardTitle: "Îles de Loos",
     cardDescription:
@@ -117,9 +125,9 @@ const explorerCards: ExplorerCardsTypes = [
 ];
 
 // Decouvrer Section
-const decouvrerSection: DecouvrerSectionTypes = {
-  decouvrerTitle: "Découvrez Conakry en Vidéo",
-  decouverDescription:
+const discoverSection: discoverSectionTypes = {
+  discoverTitle: "Découvrez Conakry en Vidéo",
+  discoverDescription:
     "Plongez au cœur de Conakry à travers cette vidéo immersive qui met en lumière la beauté naturelle, la richesse culturelle et l’énergie vibrante de notre ville. Des plages dorées aux quartiers animés, des marchés traditionnels aux paysages enchanteurs, laissez-vous emporter par un voyage unique à la découverte de Conakry.Visionnez la vidéo et explorez une ville où chaque coin de rue raconte une histoire, et où la nature se mêle harmonieusement à un patrimoine culturel vivant. ",
   // decouvrerVideo: ,
 };
@@ -135,6 +143,12 @@ const communeSlider: CommuneSliderTypes = [
   {
     id: 21,
     sliderTitle: "Commune de Kaloum",
+    sliderDescription:
+      "Le cœur historique et administratif de Conakry. Kaloum abrite les institutions gouvernementales, les principaux bureaux d’affaires, ainsi que des sites emblématiques comme le Palais du Peuple et le Port Autonome de Conakry.",
+  },
+  {
+    id: 22,
+    sliderTitle: "Commune de Ratoma",
     sliderDescription:
       "Le cœur historique et administratif de Conakry. Kaloum abrite les institutions gouvernementales, les principaux bureaux d’affaires, ainsi que des sites emblématiques comme le Palais du Peuple et le Port Autonome de Conakry.",
   },
@@ -220,9 +234,9 @@ export {
   navBarList,
   navBarBtn,
   heroSection,
-  explorerSection,
-  explorerCards,
-  decouvrerSection,
+  exploreSection,
+  exploreCards,
+  discoverSection,
   communeSection,
   communeSlider,
   evenementSection,
