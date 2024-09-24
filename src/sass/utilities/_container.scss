@@ -1,19 +1,25 @@
 @use "../abstracts/" as *;
 
-// .container {
-//   --padding: #{$container-min-margin-inline} * 2;
-//   --max-width: #{$container-max-width};
+.container {
+  --padding: #{$container-min-padding-inline} * 2;
+  --max-width: #{$container-max-width-xlg};
 
-//   width: min(100% - var(--padding), var(--max-width));
-//   margin-inline: auto;
-// }
+  width: min(100% - var(--padding), var(--max-width));
+  margin-inline: auto;
+}
 
-// .container[data-type="narrow"] {
-//   --max-width: #{$container-max-width-narrow};
-// }
-// .container[data-type="wide"] {
-//   --max-width: #{$container-max-width-wide};
-// }
-// .container[data-type="full-bleed"] {
-//   --max-width: 100%;
-// }
+.container-lg {
+  --max-width: #{$container-max-width-lg};
+}
+
+.container-md {
+  --max-width: #{$container-max-width-md};
+}
+
+.container-sm {
+  --max-width: #{$container-max-width-sm};
+}
+
+.container-full {
+  --max-width: 100%;
+}

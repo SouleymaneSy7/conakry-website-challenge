@@ -1,5 +1,38 @@
+// Font Family
 $-ff-josefin-sans: "Josefin Sans", sans-serif;
 $-ff-fraunces: "Fraunces", sans-serif;
 
+// Font Weight
+$-fw-400: 400;
+$-fw-700: 700;
+
+// Font Size
+$-fs-56-76: clamp(3.5rem, 3.1429rem + 1.7857vw, 4.75rem);
+$-fs-48-76: clamp(3rem, 2.5rem + 2.5vw, 4.75rem);
+$-fs-48-56: clamp(3rem, 2.8571rem + 0.7143vw, 3.5rem);
+$-fs-40-56: clamp(2.5rem, 2.2143rem + 1.4286vw, 3.5rem);
+$-fs-32-48: clamp(2rem, 1.7143rem + 1.4286vw, 3rem);
+$-fs-40-48: clamp(2.5rem, 2.3571rem + 0.7143vw, 3rem);
+$-fs-24-48: clamp(1.5rem, 1.0714rem + 2.1429vw, 3rem);
+$-fs-24-32: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+$-fs-20-32: clamp(1.25rem, 1.0357rem + 1.0714vw, 2rem);
+$-fs-20-24: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);
+$-fs-18-24: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+$-fs-18-20: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
+$-fs-16-18: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem);
+$-fs-16: 1rem;
+$-fs-14-16: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
+$-fs-12-14: clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem);
+
+$body-font-size: $-fs-16;
+$font-size-400: $-fs-16-18;
+$font-size-500: $-fs-18-20;
+$font-size-600: $-fs-20-24;
+$font-size-700: $-fs-24-32;
+$font-size-800: $-fs-40-48;
+
 $font-family-base: $-ff-josefin-sans;
 $font-family-accent: $-ff-fraunces;
+
+$font-weight-regular: $-fw-400;
+$font-weight-bold: $-fw-700;

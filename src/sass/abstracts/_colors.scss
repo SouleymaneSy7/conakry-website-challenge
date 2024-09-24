@@ -1,0 +1,13 @@
+$body-bg-color: hsl(26, 54%, 97%);
+$footer-bg-color: hsl(218, 21%, 15%);
+$footer-accent-color: hsl(162, 53%, 76%);
+$white-color: hsl(0, 0%, 100%);
+$black-color: hsl(0, 0%, 0%);
+
+$colors: (
+  body-bg: $body-bg-color,
+  footer-bg: $footer-bg-color,
+  footer-title: $footer-accent-color,
+  light: $white-color,
+  dark: $black-color,
+);

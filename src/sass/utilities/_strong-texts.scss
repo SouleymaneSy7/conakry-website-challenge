@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+.strong-text {
+  font-weight: $font-weight-bold;
+  text-decoration: underline;
+}

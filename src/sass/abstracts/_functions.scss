@@ -16,7 +16,11 @@
 }
 
 // Spacing Function
-// retrieve spacing from $spacing-sizes map ie. `spacing(3)`
+// retrieve spacing from $sizes map ie. `spacing(3)`
 @function spacing($size) {
-  @return map-get($spacing-sizes, $size);
+  @if map.has-key($sizes, $size) {
+    @return map.get($sizes, $size);
+  } @else {
+    @error '$sizes does not have that size!';
+  }
 }

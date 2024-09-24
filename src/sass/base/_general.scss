@@ -1,23 +1,14 @@
 @use "../abstracts/" as *;
 
 body {
-  font-family: "Josefin Sans", sans-serif;
-  min-height: 100vh;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-size: $body-font-size;
+  color: $body-text-color;
+  background-color: $body-background-color;
+  line-height: $body-line-height;
 }
 
-// body {
-//   font-family: $body-font-family;
-//   font-weight: $body-font-weight;
-//   font-size: $body-font-size;
-//   color: $body-text-color;
-//   background-color: $body-background-color;
-//   line-height: $body-line-height;
-// }
-
-// a {
-//   color: $link-color;
-// }
-
-// a:is(:hover, :focus) {
-//   color: $link-color-hover;
-// }
+section {
+  margin-block: $section-block-spacing;
+}

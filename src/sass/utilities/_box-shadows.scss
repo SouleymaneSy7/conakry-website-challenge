@@ -1,13 +1,13 @@
 @use "../abstracts" as *;
 
-// .box-shadow-small {
-//   box-shadow: $box-shadow-small;
-// }
+.box-shadow-sm {
+  box-shadow: $box-shadow-small;
+}
 
-// .box-shadow-medium {
-//   box-shadow: $box-shadow-medium;
-// }
+.box-shadow-md {
+  box-shadow: $box-shadow-medium;
+}
 
-// .box-shadow-large {
-//   box-shadow: $box-shadow-big;
-// }
+.box-shadow-lg {
+  box-shadow: $box-shadow-large;
+}
