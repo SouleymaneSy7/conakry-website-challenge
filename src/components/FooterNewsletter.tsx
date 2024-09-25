@@ -2,7 +2,7 @@ import Forms from "./Forms";
 import Inputs from "./Inputs";
 import Button from "./Buttons";
 import { footerNewsletter } from "@/constants/homepage-constants";
-// import FooterSocial from "./FooterSocial";
+import FooterSocial from "./FooterSocial";
 
 const FooterNewsletter = () => {
   const {
@@ -14,7 +14,7 @@ const FooterNewsletter = () => {
 
   return (
     <div className="footer__newsletter">
-      <h4>{newsletterTitle}</h4>
+      <h3>{newsletterTitle}</h3>
       <p>{newsletterDescription}</p>
 
       <Forms className="footer__newsletter__form">
@@ -28,7 +28,7 @@ const FooterNewsletter = () => {
         </Button>
       </Forms>
 
-      {/* <FooterSocial /> */}
+      <FooterSocial />
     </div>
   );
 };

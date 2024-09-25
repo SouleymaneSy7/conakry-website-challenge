@@ -1,5 +1,6 @@
-import { FooterLinksTypes } from "@/constants/homepage-constants";
 import React from "react";
+
+import { FooterLinksTypes } from "@/constants/homepage-constants";
 
 type FooterElementsListPropsTypes = {
   linkList: FooterLinksTypes;
@@ -10,7 +11,7 @@ const FooterElementsList = ({ linkList }: FooterElementsListPropsTypes) => {
     <React.Fragment>
       {linkList.map((linkListItem) => {
         return (
-          <div key={linkListItem.id}>
+          <div key={linkListItem.id} className="footer__link-elements">
             <h3 className="footer__link-elements__title">
               {linkListItem.linkTitle}
             </h3>

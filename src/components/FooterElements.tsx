@@ -1,11 +1,12 @@
+import React from 'react';
 import FooterElementsList from "./FooterElementsList";
 import { footerLinks } from "@/constants/homepage-constants";
 
 const FooterElements = () => {
   return (
-    <div className="footer__link-elements">
+    <React.Fragment>
       <FooterElementsList linkList={footerLinks} />
-    </div>
+    </React.Fragment>
   );
 };
 

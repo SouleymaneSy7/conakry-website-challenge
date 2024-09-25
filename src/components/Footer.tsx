@@ -1,10 +1,12 @@
-import React from "react";
 import { Link } from "react-router-dom";
+
+import { footerCopyright } from "@/constants/homepage-constants";
+
 import Container from "./Container";
 import FooterElements from "./FooterElements";
 import FooterNewsletter from "./FooterNewsletter";
-import { footerCopyright } from "@/constants/homepage-constants";
 import FooterAttribution from "./FooterAttribution";
+import { FooterLogo } from "@/icons/Icons.component";
 
 const Footer = () => {
   return (
@@ -12,7 +14,7 @@ const Footer = () => {
       <Container as={"section"} className="container">
         <div className="footer__top">
           <Link to={"/"} className="footer__logo">
-            {/* Footer Logo */}
+            <FooterLogo />
           </Link>
           <FooterElements />
           <FooterNewsletter />
