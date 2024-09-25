@@ -1,14 +1,12 @@
-import React, { ComponentPropsWithoutRef } from "react";
+import React, { type FC, type HTMLAttributes } from "react";
 
-type TitlePropsTypes = {
-  level: "h1" | "h2" | "h3" | "h4";
-  otherProps: ComponentPropsWithoutRef<"h1">;
-} & React.HTMLAttributes<HTMLHeadingElement>;
+interface TitleProps extends HTMLAttributes<HTMLElement> {
+  level: keyof React.JSX.IntrinsicElements;
+  children: React.ReactNode;
+}
 
-const Title = ({ level, children, otherProps }: TitlePropsTypes) => {
-  const Heading = ({
-    ...otherProps
-  }: React.HTMLAttributes<HTMLHeadingElement>) => {
+const Title: FC<TitleProps> = ({ level, children, ...otherProps }) => {
+  const Heading: FC<HTMLAttributes<HTMLElement>> = ({ ...otherProps }) => {
     return React.createElement(level, otherProps, children);
   };
 
