@@ -6,10 +6,7 @@ const DestinationHeader = () => {
   const { heroTitle, heroDescription, heroBtn } = destinationHeroSection;
 
   return (
-    <Container
-      as="header"
-      className="hero-section-container | container-medium"
-    >
+    <Container as="header">
       <DestinationHeroSection
         heroTitle={heroTitle}
         heroDescription={heroDescription}

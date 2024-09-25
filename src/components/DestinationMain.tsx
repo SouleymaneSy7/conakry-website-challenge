@@ -3,7 +3,7 @@ import DestinationSectionContents from "./DestinationSectionContents";
 
 const DestinationMain = () => {
   return (
-    <Container as={"main"}>
+    <Container as={"main"} className="destination-main">
       <DestinationSectionContents />
     </Container>
   );
