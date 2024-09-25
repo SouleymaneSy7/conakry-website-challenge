@@ -2,26 +2,25 @@
   font-family: "Josefin Sans";
   font-weight: 400;
   font-display: swap;
-  src: local("Josefin Sans"), local("JosefinSans"),
-    local("Josefin Sans Regular"),
-    url("/fonts/josefin-sans-regular-webfont.woff2") format("woff2"),
-    url("/fonts/josefin-sans-regular-webfont.woff") format("woff");
+  src: url("/src/assets/fonts/josefin-sans-regular-webfont.ttf") format("truetype"),
+    url("/src/assets/fonts/josefin-sans-regular-webfont.woff2") format("woff2"),
+    url("/src/assets/fonts/josefin-sans-regular-webfont.woff") format("woff");
 }
 
 @font-face {
   font-family: "Josefin Sans";
   font-weight: 700;
   font-display: swap;
-  src: local("Josefin Sans"), local("JosefinSans"), local("Josefin Sans Bold"),
-    url("/fonts/josefin-sans-bold-webfont.woff2") format("woff2"),
-    url("/fonts/josefin-sans-bold-webfont.woff") format("woff");
+  src: url("/src/assets/fonts/josefin-sans-bold-webfont.ttf") format("truetype"),
+    url("/src/assets/fonts/josefin-sans-bold-webfont.woff2") format("woff2"),
+    url("/src/assets/fonts/josefin-sans-bold-webfont.woff") format("woff");
 }
 
 @font-face {
   font-family: "Fraunces";
   font-weight: 700;
   font-display: swap;
-  src: local("Fraunces"), local("Fraunces Bold"),
-    url("/fonts/fraunces-bold-webfont.woff2") format("woff2"),
-    url("/fonts/fraunces-bold-webfont.woff") format("woff");
+  src: url("/src/assets/fonts/fraunces-bold-webfont.ttf") format("truetype"),
+    url("/src/assets/fonts/fraunces-bold-webfont.woff2") format("woff2"),
+    url("/src/assets/fonts/fraunces-bold-webfont.woff") format("woff");
 }
