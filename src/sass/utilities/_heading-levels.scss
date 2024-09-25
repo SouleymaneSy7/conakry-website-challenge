@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+.heading-1,
+h1 {
+  font-size: $font-size-800;
+  line-height: $heading-line-height-lg;
+}
+
+.heading-2,
+h2 {
+  font-size: $font-size-700;
+  line-height: $heading-line-height-md;
+}
+
+.heading-3,
+h3 {
+  font-size: $font-size-600;
+  line-height: $heading-line-height-sm;
+}
+
+.heading-4,
+h4 {
+  font-size: $font-size-500;
+  line-height: $heading-line-height-sm;
+}
