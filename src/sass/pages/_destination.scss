@@ -1,0 +1,135 @@
+@use "../abstracts/" as *;
+
+.destination-header,
+.destination__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: rem(32px);
+}
+
+.destination-header {
+  & .destination-header__textbox {
+    width: min(100%, rem(600px));
+  }
+
+  p {
+    margin-block-start: min(rem(24px), 2.222vh);
+  }
+
+  button {
+    box-shadow: $box-shadow-medium;
+
+    padding: rem(12px) rem(48px) rem(10px);
+
+    margin-block-start: min(rem(40px), 2.222vh);
+  }
+
+  & .destination-header__img {
+    width: rem(500px);
+    height: rem(400px);
+
+    border: $border-sm;
+    box-shadow: $box-shadow-medium;
+  }
+}
+
+.destination-main {
+  --card-width: #{rem(250px)};
+
+  padding-block-start: rem(64px);
+  padding-block-end: rem(56px);
+
+  & section {
+    padding-block: min(spacing(15), 8vh);
+  }
+}
+
+.destination__flex {
+  gap: rem(24px);
+
+  & .destination__text p {
+    margin-block-start: rem(12px);
+  }
+}
+
+// .destination__nature {
+//   background-color: purple;
+// }
+
+// .destination__gastronomy {
+//   background-color: salmon;
+// }
+
+// .destination__adventure {
+//   background-color: greenyellow;
+// }
+
+.destination__cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: rem(24px);
+
+  margin-block-start: min(rem(56px), 3.611vh);
+
+  & > * {
+    flex: 1 1 var(--card-width);
+  }
+
+  & .card {
+    width: min(100%, var(--card-width));
+
+    border: $border-sm;
+    box-shadow: $box-shadow-medium;
+    background-color: var(--light-clr);
+
+    padding: rem(20px);
+
+    &__img {
+      width: 100%;
+      border: $border-sm;
+
+      margin-block-end: rem(20px);
+
+      & img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    &__description {
+      margin-block-start: rem(4px);
+    }
+
+    &--btn {
+      border: $border-sm;
+      box-shadow: none;
+
+      padding: rem(10px) rem(32px) rem(6px);
+      margin-block-start: rem(16px);
+    }
+  }
+}
+
+.destination--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-block-start: rem(24px);
+
+  & button {
+    width: 100%;
+
+    padding: rem(12px) 0 rem(10px);
+
+    @include media-queries(sm) {
+      width: rem(245px);
+    }
+  }
+}
