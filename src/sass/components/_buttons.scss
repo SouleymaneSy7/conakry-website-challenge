@@ -4,6 +4,8 @@ button {
   -webkit-appearance: none;
   appearance: none;
   outline: none;
+
+  font-weight: $font-weight-bold;
   
   border: $border-sm;
   box-shadow: $box-shadow-small;
