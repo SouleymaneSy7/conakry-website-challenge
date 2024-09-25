@@ -1,12 +1,14 @@
 import { historyIntroduction } from "@/constants/history-page-constants";
 import Container from "./Container";
+import Button from "./Buttons";
+import { LinkArrowIcon } from "@/icons/Icons.component";
 
 const HistoryMain = () => {
   const { historyTitle, historyIntro } = historyIntroduction;
 
   return (
-    <Container as={"main"}>
-      <div>
+    <Container as={"main"} className="history-main | container">
+      <div className="history__intro">
         <h1>{historyTitle}</h1>
         <p>{historyIntro}</p>
       </div>
@@ -15,10 +17,18 @@ const HistoryMain = () => {
         <h2>Étymologie</h2>
         <p>
           Selon une légende, à l'origine, il y avait dans l'
-          <strong>île Tombo</strong>, non loin de l'actuel port, un framager
-          géant sous lequel un paysan <strong>baga</strong> du nom de{" "}
-          <strong>Cona</strong> avait construit sa case. Sa palmeraie produisait
-          le meilleur{" "}
+          <a href="#">
+            <strong>île Tombo</strong>
+          </a>
+          , non loin de l'actuel port, un framager géant sous lequel un paysan{" "}
+          <a href="#">
+            <strong>baga</strong>
+          </a>{" "}
+          du nom de{" "}
+          <a href="#">
+            <strong>Cona</strong>
+          </a>{" "}
+          avait construit sa case. Sa palmeraie produisait le meilleur{" "}
           <a href="#">
             <strong>vin de palme</strong>
           </a>{" "}
@@ -31,7 +41,7 @@ const HistoryMain = () => {
           <a href="#">
             <strong>(nakiri)</strong>
           </a>{" "}
-          ». Ainsi, par contraction, le lieu devint
+          ». Ainsi, par contraction, le lieu devint{" "}
           <a href="#">
             <strong>Conakry</strong>
           </a>{" "}
@@ -163,6 +173,18 @@ const HistoryMain = () => {
       {/* <div>
         <h2></h2>
       </div> */}
+
+      <Button type="button" className="history--btn">
+        Visiter Conakry
+      </Button>
+
+      <a href="#" className="history__link">
+        Découvrez d'autres sections liées à la culture, aux événements, et à la
+        vie quotidienne de Conakry.
+        <span className="link__icon">
+          <LinkArrowIcon  width={24} height={24} />
+        </span>
+      </a>
     </Container>
   );
 };
