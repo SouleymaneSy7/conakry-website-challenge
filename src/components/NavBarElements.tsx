@@ -5,7 +5,7 @@ import { navBarList } from "@/constants/homepage-constants";
 const NavBarElements = () => {
   return (
     <React.Fragment>
-      <ul className="navigation__elements">
+      <ul className="navigation__elements" role="list">
         <NavBarElementsList list={navBarList} />
       </ul>
     </React.Fragment>

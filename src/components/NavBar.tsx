@@ -1,18 +1,23 @@
 import { Link } from "react-router-dom";
-import NavBarElements from "./NavBarElements";
-import Button from "./Buttons";
+
 import { navBarBtn } from "@/constants/homepage-constants";
+import { Logo } from "@/icons/Icons.component";
+import Button from "./Buttons";
+import NavBarElements from "./NavBarElements";
+import Container from "./Container";
 
 const NavBar = () => {
   return (
-    <nav className="navigation">
-      <Link className="navigation__logo" to={"/"}>
-        {/* Logo */}
-      </Link>
-      <NavBarElements />
-      <Button className="navigation--btn" type="button">
-        {navBarBtn}
-      </Button>
+    <nav className="navigation-desktop">
+      <Container as={"div"} className="container">
+        <Link className="navigation__logo" to={"/"}>
+          <Logo />
+        </Link>
+        <NavBarElements />
+        <Button className="navigation--btn" type="button">
+          {navBarBtn}
+        </Button>
+      </Container>
     </nav>
   );
 };
