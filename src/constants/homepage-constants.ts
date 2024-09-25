@@ -199,6 +199,15 @@ const evenementCards: EvenementCardsType = [
       "La semaine de la mode à Conakry présente les créations des stylistes guinéens et africains. Cet événement attire des designers, des influenceurs et des amateurs de mode de tout le continent.",
     evenementCardBtn: "Réserver votre place",
   },
+  {
+    id: 34,
+    // evenementCardImg: ,
+    evenementCardTitle: "Conakry Fashion Week",
+    evenementCardDate: "Août 2024",
+    evenementCardDescription:
+      "La semaine de la mode à Conakry présente les créations des stylistes guinéens et africains. Cet événement attire des designers, des influenceurs et des amateurs de mode de tout le continent.",
+    evenementCardBtn: "Réserver votre place",
+  },
 ];
 
 // Footer
