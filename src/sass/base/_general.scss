@@ -7,8 +7,15 @@ body {
   color: $body-text-color;
   background-color: $body-background-color;
   line-height: $body-line-height;
+  overflow-x: hidden;
 }
 
 section {
-  margin-block: $section-block-spacing;
+  padding-block: $section-block-spacing;
+}
+
+h1, h2, h3, h4 {
+  font-family: $heading-font-family;
+  font-weight: $font-weight-bold;
+  color: $text-color-default;
 }
