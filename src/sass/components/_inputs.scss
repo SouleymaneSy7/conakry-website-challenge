@@ -1,12 +1,13 @@
 @use "../abstracts/" as *;
 
-button {
+input {
   -webkit-appearance: none;
   appearance: none;
   outline: none;
-  
-  border: $border-sm;
-  box-shadow: $box-shadow-small;
 
-  cursor: pointer;
+  width: 100%;
+
+  border: $border-md;
+
+  padding: rem(14px);
 }

@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+.navigation-desktop .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-block: rem(20px);
+
+  & ul {
+    display: flex;
+    align-items: center;
+    gap: rem(32px);
+  }
+}
