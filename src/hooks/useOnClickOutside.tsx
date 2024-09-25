@@ -1,21 +1,21 @@
 import React from "react";
 
-export const useOnClickOutside = (
+const useOnClickOutside = (
   ref: React.RefObject<HTMLElement>,
-  handler: (event: MouseEvent) => void
+  callback: () => void
 ): void => {
   React.useEffect(() => {
-    const listener = (event: MouseEvent): void => {
+    const handleClick = (event: MouseEvent): void => {
       if (!ref.current || ref.current.contains(event.target as Node)) {
         return;
       }
-      handler(event);
+      callback();
     };
-    document.addEventListener("mousedown", listener);
+    document.addEventListener("mousedown", handleClick);
     return () => {
-      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("mousedown", handleClick);
     };
-  }, [ref, handler]);
+  }, [ref, callback]);
 };
 
 export default useOnClickOutside;
