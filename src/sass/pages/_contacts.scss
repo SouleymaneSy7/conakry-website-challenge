@@ -1,55 +1,101 @@
 @use "../abstracts/" as *;
 
-.history-main {
-  padding-block-start: spacing(12);
-  padding-block-end: spacing(9);
+.contact-main {
+  padding-block-start: rem(64px);
+  padding-block-end: rem(56px);
+}
 
-  & .history__intro > * + * {
-    margin-block-start: min(rem(32px), 2.222vh);
-  }
+.contact__flex {
+  display: flex;
+  flex-direction: column;
+  gap: rem(84px);
 
-  & div > * + * {
-    margin-block-start: rem(12px);
-  }
+  margin-block-start: rem(48px);
 
-  & div:not(.history__intro) {
-    margin-block-start: min(rem(56px), 3.333vh);
-  }
-
-  & img {
-    margin-block-start: rem(40px);
-  }
-
-  & .history--btn {
-    background-color: yellow;
-
-    padding: rem(12px) rem(48px) rem(10px);
-    margin-block-start: rem(40px);
-  }
-
-  & .history__link {
-    position: relative;
-    display: block;
-
-    font-weight: $font-weight-bold;
-    color: $text-color-default;
-    text-decoration: underline;
-
-    margin-block-start: rem(16px);
-
-    & .link__icon {
-      display: inline-block;
-      rotate: 45deg;
-
-      width: rem(24px);
-      height: rem(24px);
-
-      margin-block-start: rem(-5px);
-    }
+  @include media-queries(lg) {
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
 
-.footer,
-.navigation-desktop {
-  display: none;
+.contact__intro {
+  width: min(100%, rem(600px));
+
+  & > * {
+    margin-block-start: rem(12px);
+  }
+}
+
+.contact__form {
+  width: min(100%, rem(500px));
+
+  & > * {
+    width: 100%;
+  }
+
+  & > * + * {
+    margin-block-start: rem(18px);
+  }
+
+  &__flex {
+    @include media-queries(md) {
+      display: flex;
+      gap: rem(12px);
+    }
+  }
+
+  &__text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & textarea {
+      width: 100%;
+      height: rem(300px);
+      border: $border-sm;
+    }
+  }
+
+  &--btn {
+    padding-block: rem(12px);
+  }
+}
+
+.contact__accordion {
+  width: min(100%, rem(650px));
+  margin: 0;
+
+  & h2 {
+    margin-block-end: rem(24px);
+  }
+
+  & .accordion {
+    border-left: $border-md;
+    border-right: $border-md;
+
+    &:nth-last-child(1) {
+      border-bottom: $border-md;
+    }
+  }
+
+  & .accordion__header {
+    background-color: white;
+    padding: rem(12px);
+
+    border-top: $border-md;
+    border-bottom: $border-md;
+
+    & button {
+      border: none;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+    }
+  }
+
+  & .accordion__body {
+    // padding: rem(12px);
+    height: 0;
+    overflow: hidden;
+  }
 }
