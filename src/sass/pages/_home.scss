@@ -1,0 +1,148 @@
+@use "../abstracts/" as *;
+
+.home-header {
+  min-height: 100vh;
+}
+
+.home-header .hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(32px);
+
+  & .hero-section__textbox {
+    width: min(100%, rem(500px));
+  }
+
+  & .hero-section__img {
+    width: min(100%, rem(600px));
+    height: rem(450px);
+
+    border: $border-lg;
+    box-shadow: $box-shadow-large;
+  }
+
+  @include media-queries(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-block: rem(120px);
+  }
+}
+
+.home-main {
+  & section > div:nth-last-child(1) {
+    margin-block-start: min(rem(28px), 3vh);
+  }
+
+  & section > div:nth-child(1) p {
+    margin-block-start: rem(4px);
+  }
+
+  @include media-queries(md) {
+    & section.container {
+      padding-block: min(rem(140px), 5vh);
+    }
+  }
+}
+
+// Explore Section
+.explore__flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.explore__textbox {
+  width: min(100%, rem(550px));
+}
+
+.explore-card-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: rem(16px);
+
+}
+
+.explore-card {
+  border: $border-md;
+  box-shadow: $box-shadow-medium;
+
+  padding: rem(20px);
+
+  &__title {
+    margin-block-start: rem(20px);
+  }
+
+  &__description {
+    margin-block-start: rem(4px);
+  }
+
+  &--btn {
+    box-shadow: none;
+
+    padding: rem(8px) rem(32px) rem(6px);
+    margin-block-start: rem(28px);
+  }
+}
+
+// Discover Section
+.discover__textbox {
+  width: min(100%, rem(980px));
+}
+
+.discover__video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: $border-lg;
+  box-shadow: $box-shadow-large;
+
+  width: rem(700px);
+  height: rem(400px);
+
+  margin-inline: auto;
+}
+
+// Evenement Section
+.evenement__textbox {
+  width: min(100%, rem(800px));
+}
+
+.evenement__card-container {
+  display: flex;
+  flex-direction: column;
+  gap: rem(32px);
+}
+
+.evenement-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(32px);
+
+  &__img {
+    width: min(100%, rem(500px));
+    height: rem(250px);
+
+    border: $border-md;
+    box-shadow: $box-shadow-medium;
+  }
+
+  & .evenement-card__textbox {
+    width: min(100%, rem(520px));
+  }
+
+  @include media-queries(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.evenement--btn {
+  padding: rem(12px) rem(48px) rem(10px);
+  margin-block-start: rem(40px);
+}
