@@ -1,3 +1,11 @@
+import {
+  FacebookIcon,
+  InstragramIcon,
+  TikTokIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "@/icons/Icons.component";
+
 // Types
 export type NavBarListTypes = {
   id: number;
@@ -225,7 +233,13 @@ const footerNewsletter: FooterNewsletterTypes = {
   newsletterBtn: "Rejoindre la newsletter",
 };
 
-// const footerSocialIcons: string[] = []
+const footerSocialIcons = [
+  FacebookIcon,
+  InstragramIcon,
+  TwitterIcon,
+  TikTokIcon,
+  YoutubeIcon,
+];
 
 const footerCopyright =
   "© 2024 - Ville de Conakry - Guinée. Tous droits réservés.";
@@ -245,4 +259,5 @@ export {
   footerLinks,
   footerNewsletter,
   footerCopyright,
+  footerSocialIcons,
 };
