@@ -8,11 +8,7 @@ type InputsProps = {
 
 const Inputs = ({ label, id, type, ...otherProps }: InputsProps) => {
   if (!label) {
-    return (
-      <div>
-        <input id={id} type={type} {...otherProps} />
-      </div>
-    );
+    return <input id={id} type={type} {...otherProps} />;
   }
 
   return (
