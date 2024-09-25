@@ -35,7 +35,7 @@ $body-background-color: $body-background-color-default;
 //       Container Width
 // ============================
 
-$container-max-width-xlg: rem(1440px);
+$container-max-width-xlg: rem(1200px);
 $container-max-width-lg: rem(1024px);
 $container-max-width-md: rem(720px);
 $container-max-width-sm: rem(540px);
@@ -49,9 +49,9 @@ $container-min-padding-inline: spacing(4);
 //        Box Shadow
 // ============================
 
-$box-shadow-small: rem(4px) rem(4px) 0 0 $black-color;
-$box-shadow-medium: rem(8px) rem(8px) 0 0 $black-color;
-$box-shadow-large: rem(12px) rem(12px) 0 0 $black-color;
+$box-shadow-small: rem(2px) rem(2px) 0 0 $black-color;
+$box-shadow-medium: rem(4px) rem(4px) 0 0 $black-color;
+$box-shadow-large: rem(8px) rem(8px) 0 0 $black-color;
 
 // ============================
 //         Borders
