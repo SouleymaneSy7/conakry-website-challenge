@@ -1,12 +1,12 @@
+import Container from "./Container";
 import { contactIntro } from "@/constants/contact-page-constants";
-import React from "react";
 
 const ContactIntro = () => {
   return (
-    <React.Fragment>
+    <Container as={"div"} className="contact__intro">
       <h1>{contactIntro.title}</h1>
       <p>{contactIntro.description}</p>
-    </React.Fragment>
+    </Container>
   );
 };
 

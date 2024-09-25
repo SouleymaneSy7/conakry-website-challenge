@@ -6,15 +6,18 @@ import ContactMap from "./ContactMap";
 
 const ContactMain = () => {
   return (
-    <Container as={"main"}>
+    <Container as={"main"} className="contact-main | container">
       <Container as={"section"}>
-        <div>
-          <ContactIntro />
-          <ContactForm />
-        </div>
+        <ContactIntro />
 
-        <div>
-          <ContactMap />
+        <div className="contact__flex">
+          <div>
+            <ContactForm />
+          </div>
+
+          <div>
+            <ContactMap />
+          </div>
         </div>
       </Container>
 

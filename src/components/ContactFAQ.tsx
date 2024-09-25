@@ -10,14 +10,14 @@ const ContactFAQ = () => {
   const FAQResponseId = `faq-response-${id}`;
 
   return (
-    <Container as="section">
+    <Container as="section" className="contact__accordion">
       <h2>Foire aux Questions (FAQ)</h2>
 
       {FAQ.map((item) => {
         return (
-          <Container as={"div"} key={item.id}>
-            <div>
-              <h3>
+          <Container as={"div"} key={item.id} className="accordion">
+            <div className="accordion__header">
+              <h4>
                 <Button
                   type="button"
                   id={FAQQuestionId}
@@ -26,13 +26,14 @@ const ContactFAQ = () => {
                   <span>{item.faqQuestion}</span>
                   {/* Icons */}
                 </Button>
-              </h3>
+              </h4>
             </div>
 
             <div
               role="region"
               id={FAQResponseId}
               aria-labelledby={FAQQuestionId}
+              className="accordion__body"
             >
               {item.faqResponse}
             </div>

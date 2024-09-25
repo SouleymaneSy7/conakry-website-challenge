@@ -12,22 +12,26 @@ const ContactForm = () => {
   const messageId = `${id}-message`;
 
   return (
-    <Forms>
-      <Inputs id={firstNameId} label="Nom" type="text" placeholder="John" />
-      <Inputs id={lastNameId} label="Prénom" type="text" placeholder="Doe" />
+    <Forms className="contact__form">
+      <div className="contact__form__flex">
+        <Inputs id={firstNameId} label="Nom" type="text" placeholder="John" />
+        <Inputs id={lastNameId} label="Prénom" type="text" placeholder="Doe" />
+      </div>
+
       <Inputs
         id={emailId}
         label="Adresse e-mail "
         type="text"
         placeholder="johndoe@email.com"
       />
-      <Container as={"div"}>
+      
+      <Container as={"div"} className="contact__form__text-area">
         <label htmlFor={messageId}>
           Message <span>*</span>
         </label>
         <textarea id={messageId}></textarea>
       </Container>
-      <Button type="submit">Envoyer</Button>
+      <Button type="submit" className="contact__form--btn">Envoyer</Button>
     </Forms>
   );
 };
