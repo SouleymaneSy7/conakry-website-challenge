@@ -9,7 +9,11 @@
 }
 
 .container-lg {
+  --padding: #{$container-min-padding-inline} * 2;
   --max-width: #{$container-max-width-lg};
+
+  width: min(100% - var(--padding), var(--max-width));
+  margin-inline: auto;
 }
 
 .container-md {
