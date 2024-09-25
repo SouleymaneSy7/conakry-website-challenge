@@ -5,9 +5,9 @@ import Button from "./Buttons";
 
 const HomeMainExploreSection = () => {
   return (
-    <Container as={"section"} className="explore-section">
-      <div>
-        <div>
+    <Container as={"section"} className="explore-section | container">
+      <div className="explore__flex">
+        <div className="explore__textbox">
           <h2>{exploreSection.explorerTitle}</h2>
           <p>{exploreSection.explorerDescription}</p>
         </div>
@@ -17,7 +17,7 @@ const HomeMainExploreSection = () => {
         </div> */}
       </div>
 
-      <Container as={"div"}>
+      <Container as={"div"} className="explore-card-container">
         {exploreCards.map((card) => {
           return (
             <Container as={"article"} key={card.id} className="explore-card">
@@ -29,7 +29,7 @@ const HomeMainExploreSection = () => {
               <p className="explore-card__description">
                 {card.cardDescription}
               </p>
-              <Button type="button" className="explore__card--btn">
+              <Button type="button" className="explore-card--btn">
                 {card.cardBtn}
               </Button>
             </Container>

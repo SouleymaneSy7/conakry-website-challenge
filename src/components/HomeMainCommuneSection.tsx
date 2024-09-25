@@ -3,9 +3,11 @@ import { communeSection, communeSlider } from "../constants/homepage-constants";
 
 const HomeMainCommuneSection = () => {
   return (
-    <Container as={"section"}>
-      <h2>{communeSection.communeTitle}</h2>
-      <p>{communeSection.communeDescription}</p>
+    <Container as={"section"} className="commune-section | container">
+      <div>
+        <h2>{communeSection.communeTitle}</h2>
+        <p>{communeSection.communeDescription}</p>
+      </div>
 
       <div>
         <Container as={"div"}>

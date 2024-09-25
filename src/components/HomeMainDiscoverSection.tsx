@@ -3,10 +3,13 @@ import Container from "./Container";
 
 const HomeMainDiscoverSection = () => {
   return (
-    <Container>
-      <h2> {discoverSection.discoverTitle} </h2>
-      <p> {discoverSection.discoverDescription}</p>
-      {/* Video */}
+    <Container as={"section"} className="discover-section | container">
+      <div className="discover__textbox">
+        <h2> {discoverSection.discoverTitle} </h2>
+        <p> {discoverSection.discoverDescription}</p>
+      </div>
+
+      <div className="discover__video">{/* Video */}</div>
     </Container>
   );
 };

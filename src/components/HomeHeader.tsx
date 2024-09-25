@@ -8,7 +8,7 @@ const HomeHeader = () => {
   return (
     <Container
       as="header"
-      className="hero-section-container | container-medium"
+      className="home-header | container"
     >
       <HeroSection heroTitle={heroTitle} heroBtnText={heroBtnText} />
     </Container>
