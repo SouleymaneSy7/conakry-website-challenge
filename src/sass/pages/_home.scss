@@ -1,7 +1,11 @@
 @use "../abstracts/" as *;
 
 .home-header {
-  min-height: 100vh;
+  min-height: calc(100vh - rem(90px));
+
+  // @include media-queries(xlg) {
+  //   min-height: auto;
+  // }
 }
 
 .home-header .hero-section {
@@ -20,6 +24,11 @@
 
     border: $border-lg;
     box-shadow: $box-shadow-large;
+  }
+
+  & .hero-section--btn {
+    padding: rem(14px) rem(48px) rem(12px);
+    margin-block-start: rem(32px);
   }
 
   @include media-queries(md) {
@@ -106,7 +115,7 @@
   border: $border-lg;
   box-shadow: $box-shadow-large;
 
-  width: rem(700px);
+  width: min(100%, rem(700px));
   height: rem(400px);
 
   margin-inline: auto;
