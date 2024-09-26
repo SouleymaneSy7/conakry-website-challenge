@@ -1,7 +1,6 @@
-import { historyIntroduction } from "@/constants/history-page-constants";
-import Container from "./Container";
 import Button from "./Buttons";
-import { LinkArrowIcon } from "@/icons/Icons.component";
+import Container from "./Container";
+import { historyIntroduction } from "@/constants/history-page-constants";
 
 const HistoryMain = () => {
   const { historyTitle, historyIntro } = historyIntroduction;
@@ -181,9 +180,6 @@ const HistoryMain = () => {
       <a href="#" className="history__link">
         Découvrez d'autres sections liées à la culture, aux événements, et à la
         vie quotidienne de Conakry.
-        <span className="link__icon">
-          <LinkArrowIcon  width={24} height={24} />
-        </span>
       </a>
     </Container>
   );
