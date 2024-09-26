@@ -24,13 +24,19 @@ const NavBar = () => {
             <Logo />
           </Link>
 
-          <Container
-            as={"div"}
-            className="navigaton-mobile__hamburger"
+          <Button
+            type="button"
+            className={
+              isOpen
+                ? "navigation-mobile--hamburger active"
+                : "navigation-mobile--hamburger"
+            }
             onClick={handleOpen}
           >
-            Hamburger
-          </Container>
+            <span className="line-top"></span>
+            <span className="line-center"></span>
+            <span className="line-bottom"></span>
+          </Button>
         </Container>
 
         <Container as={"div"} className="navigation-desktop | container">
@@ -44,7 +50,7 @@ const NavBar = () => {
         </Container>
       </nav>
 
-      <NavBarMobile isOpen={isOpen} handleOpen={handleOpen} />
+      <NavBarMobile isOpen={isOpen} />
     </React.Fragment>
   );
 };

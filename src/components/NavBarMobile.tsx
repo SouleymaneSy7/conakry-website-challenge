@@ -12,10 +12,9 @@ const mobileNavDOM = document.querySelector("#mobile-navbar-root");
 
 type NavbarMobilePropsTypes = {
   isOpen: boolean;
-  handleOpen: () => void;
 };
 
-const NavBarMobile = ({ isOpen, handleOpen }: NavbarMobilePropsTypes) => {
+const NavBarMobile = ({ isOpen }: NavbarMobilePropsTypes) => {
   useDisableBodyScroll(isOpen);
   return (
     <React.Fragment>
@@ -26,17 +25,11 @@ const NavBarMobile = ({ isOpen, handleOpen }: NavbarMobilePropsTypes) => {
               className={
                 isOpen
                   ? "navigation-mobile-container active"
-                  : "navigation-mobile"
+                  : "navigation-mobile-container"
               }
             >
-              <div className="navigation-mobile__header">
-                <Button type="button" onClick={handleOpen}>
-                  X
-                </Button>
-              </div>
-
               <div className="navigation-mobile__body">
-                <ul>
+                <ul role="list">
                   {navBarList.map((listItem) => {
                     return (
                       <li key={listItem.id}>
