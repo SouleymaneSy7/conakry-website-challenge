@@ -1,15 +1,127 @@
 @use "../abstracts" as *;
 
-.navigation-desktop .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+.navigation {
   padding-block: rem(20px);
+}
 
-  & ul {
-    display: flex;
-    align-items: center;
-    gap: rem(32px);
+.navigation__logo {
+  display: grid;
+  place-items: center;
+}
+
+.navigation-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 100000;
+
+  @include media-queries(md) {
+    display: none;
+    visibility: hidden;
   }
+}
+
+.navigation-mobile--hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(6px);
+
+  width: rem(42px);
+
+  border: none;
+  box-shadow: none;
+  background: none;
+
+  &.active .line-top {
+    transform: rotate(45deg) translate(rem(6px), rem(-3px));
+    transform-origin: 0% 0%;
+  }
+
+  &.active .line-center {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  &.active .line-bottom {
+    transform: rotate(-45deg) translate(rem(7px), rem(-6px));
+  }
+
+  & span {
+    display: inline-block;
+
+    width: 100%;
+    height: rem(5px);
+
+    background-color: var(--dark-clr);
+  }
+}
+
+.navigation-mobile-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(80%, rem(400px));
+  height: 100vh;
+  z-index: 100;
+
+  background-color: var(--light-clr);
+
+  padding: rem(48px);
+
+  @include media-queries(md) {
+    display: none;
+    visibility: hidden;
+  }
+
+  & .navigation-mobile__body {
+    padding-block-start: rem(32px);
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      gap: rem(32px);
+
+      margin-block-end: rem(48px);
+
+      & li a {
+        font-size: $font-size-500;
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    & .navigation-mobile--btn {
+      padding: rem(12px) rem(32px) rem(10px);
+    }
+  }
+}
+
+.navigation-desktop {
+  display: none;
+  visibility: hidden;
+
+  @include media-queries(md) {
+    & {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      visibility: visible;
+    }
+
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: rem(32px);
+    }
+  }
+}
+
+.navigation--btn {
+  padding: rem(10px) rem(24px) rem(8px);
 }
