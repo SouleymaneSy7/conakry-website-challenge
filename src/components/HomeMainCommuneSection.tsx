@@ -1,8 +1,10 @@
 import React from "React";
-import Container from "./Container";
+
 import { communeSection, communeSlider } from "../constants/homepage-constants";
-import LeafletMapContainer from "./LeafletMapContainer";
+
 import Button from "./Buttons";
+import Container from "./Container";
+import LeafletMapContainer from "./LeafletMapContainer";
 
 const HomeMainCommuneSection = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
