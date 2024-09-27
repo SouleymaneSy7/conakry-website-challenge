@@ -46,6 +46,12 @@ export type CommuneSliderTypes = {
   sliderDescription: string;
 }[];
 
+export type communeMapMarkersTypes = {
+  name: string;
+  position: number[];
+  description: string;
+}[];
+
 export type EvenementSectionTypes = {
   evenementTitle: string;
   evenementDescription: string;
@@ -125,9 +131,57 @@ const exploreCards: ExploreCardsTypes = [
   {
     id: 12,
     // cardImage: ,
-    cardTitle: "Îles de Loos",
+    cardTitle: "Restaurant - Le Damier",
     cardDescription:
-      "L'archipel comprend trois îles : Tamara 'la sauvage', Room 'la tranquille' et Kassa 'la fêtarde'. Trois îles qu'il faut prendre le temps de découvrir tant leur beauté sauvage est préservée et la pêche, leur atout principal.",
+      "Un restaurant incontournable de Conakry offrant une cuisine variée, locale et internationale. Apprécié pour son cadre convivial et ses plats raffinés.",
+    cardBtn: "Visiter",
+  },
+  {
+    id: 13,
+    // cardImage: ,
+    cardTitle: "Hôtel - Palm Camayenne",
+    cardDescription:
+      "Ce luxueux hôtel propose des chambres avec vue sur l’océan Atlantique, un spa, une piscine, et une gastronomie haut de gamme. Une véritable oasis en plein cœur de la ville.",
+    cardBtn: "Visiter",
+  },
+  {
+    id: 14,
+    // cardImage: ,
+    cardTitle: "Plage de Rogbané",
+    cardDescription:
+      "Située au nord de Conakry, cette plage est populaire pour ses magnifiques couchers de soleil et ses ambiances décontractées. Un lieu idéal pour les balades en bord de mer et les pique-niques.",
+    cardBtn: "Visiter",
+  },
+  {
+    id: 15,
+    // cardImage: ,
+    cardTitle: "Restaurant - Le Moulin",
+    cardDescription:
+      "Ce restaurant, situé en bord de mer, est célèbre pour ses fruits de mer frais et ses plats typiques guinéens. Le cadre pittoresque et les vues sur l'océan en font un lieu idéal pour un dîner romantique.",
+    cardBtn: "Visiter",
+  },
+  {
+    id: 16,
+    // cardImage: ,
+    cardTitle: "Parc de la Paix",
+    cardDescription:
+      "Un oasis de verdure au cœur de Conakry, idéal pour des promenades en famille, des pique-niques ou des activités de loisirs. Le parc est également un lieu de rassemblement pour divers événements culturels.",
+    cardBtn: "Visiter",
+  },
+  {
+    id: 17,
+    // cardImage: ,
+    cardTitle: "Plage de Taouyah",
+    cardDescription:
+      "Située à quelques kilomètres au sud de Conakry, la plage de Taouyah est prisée pour ses eaux cristallines et son ambiance calme. C'est un endroit parfait pour se détendre, nager et profiter de la nature.",
+    cardBtn: "Visiter",
+  },
+  {
+    id: 18,
+    // cardImage: ,
+    cardTitle: "Restaurant - Le Plaza",
+    cardDescription:
+      "Réputé pour ses plats raffinés et son service de qualité, Le Plaza propose une cuisine fusion mêlant saveurs locales et internationales. Son ambiance élégante en fait un lieu prisé pour les occasions spéciales.",
     cardBtn: "Visiter",
   },
 ];
@@ -180,6 +234,39 @@ const communeSlider: CommuneSliderTypes = [
   },
 ];
 
+const communeMapMarkers: communeMapMarkersTypes = [
+  {
+    name: "Kaloum",
+    position: [9.5149641, -13.7084413],
+    description:
+      "Kaloum – Le Cœur Historique et Administratif. Kaloum, située sur la presqu’île, est le centre administratif et historique de Conakry. On y trouve les institutions gouvernementales, les ambassades, ainsi que les grandes entreprises. Connue pour son architecture coloniale et ses bâtiments emblématiques, Kaloum est le cœur battant de la capitale.",
+  },
+  {
+    name: "Matam",
+    position: [9.5450927, -13.6646999],
+    description:
+      "Matam – Le Carrefour Culturel et Commercial. Matam est un quartier principalement résidentiel, mais qui abrite également des zones commerciales importantes. Connu pour sa diversité, Matam est un carrefour culturel où se mélangent traditions guinéennes et influences modernes. La mosquée Fayçal, la plus grande mosquée de Guinée, y est située.",
+  },
+  {
+    name: "Dixinn",
+    position: [9.5471058, -13.6729364],
+    description:
+      "Dixinn – Le Poumon Universitaire. Dixinn abrite certaines des institutions les plus importantes de Conakry, dont l’Université Gamal Abdel Nasser. Ce quartier dynamique est aussi un centre pour les jeunes, avec de nombreux événements culturels et sportifs. Dixinn est à la fois résidentiel et universitaire.",
+  },
+  {
+    name: "Matoto",
+    position: [9.618061, -13.5889068],
+    description:
+      "Matoto – La Porte d’Entrée de Conakry. Matoto est la plus grande commune de Conakry en termes de superficie. C’est ici que se trouve l’aéroport international de Gbessia, porte d’entrée de la Guinée. Matoto est un centre d’affaires en plein essor, avec une population croissante et des quartiers en pleine expansion.",
+  },
+  {
+    name: "Ratoma",
+    position: [9.6306334, -13.6078389],
+    description:
+      "Ratoma – Le Dynamisme de la Jeunesse. Ratoma est la commune la plus peuplée et l'une des plus dynamiques. Ce quartier résidentiel attire les jeunes et les familles, avec ses nombreux marchés, ses écoles, et ses lieux de divertissement. C’est ici que se trouve la célèbre plage de Rogbané, prisée pour ses festivals et événements en plein air.",
+  },
+];
+
 // Evenement Section
 const evenementSection: EvenementSectionTypes = {
   evenementTitle: "Événements à venir à Conakry",
@@ -211,8 +298,17 @@ const evenementCards: EvenementCardsType = [
   {
     id: 33,
     // evenementCardImg: ,
+    evenementCardTitle: "Festival National des Arts et de la Culture (FENAC)",
+    evenementCardDate: "Mars 2025",
+    evenementCardDescription:
+      "Célébration de la diversité culturelle guinéenne à travers des performances artistiques, des expositions d’artisanat et des danses traditionnelles. Un rendez-vous incontournable pour découvrir les talents locaux et l'héritage culturel du pays.",
+    evenementCardBtn: "Réserver votre place",
+  },
+  {
+    id: 34,
+    // evenementCardImg: ,
     evenementCardTitle: "Conakry Fashion Week",
-    evenementCardDate: "Août 2024",
+    evenementCardDate: "Août 2025",
     evenementCardDescription:
       "La semaine de la mode à Conakry présente les créations des stylistes guinéens et africains. Cet événement attire des designers, des influenceurs et des amateurs de mode de tout le continent.",
     evenementCardBtn: "Réserver votre place",
@@ -271,6 +367,7 @@ export {
   discoverSection,
   communeSection,
   communeSlider,
+  communeMapMarkers,
   evenementSection,
   evenementSectionBtn,
   evenementCards,
