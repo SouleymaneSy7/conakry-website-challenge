@@ -13,6 +13,7 @@ const ContactFAQ = () => {
           <ContactFAQAccordion
             question={item.faqQuestion}
             response={item.faqResponse}
+            key={item.id}
           />
         );
       })}
