@@ -1,4 +1,3 @@
-import React from "react";
 import { MapContainer } from "react-leaflet/MapContainer";
 import { TileLayer } from "react-leaflet/TileLayer";
 import { Marker } from "react-leaflet/Marker";
@@ -52,7 +51,10 @@ const LeafletMapContainer = () => {
 
       {communeMarkers.map((markerItem) => {
         return (
-          <Marker key={markerItem.name} position={markerItem.position}>
+          <Marker
+            key={markerItem.name}
+            position={[markerItem.position[0], markerItem.position[1]]}
+          >
             <Popup>
               Hello From Conakry. <br /> {markerItem.description}
             </Popup>
