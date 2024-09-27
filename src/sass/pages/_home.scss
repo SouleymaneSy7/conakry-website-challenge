@@ -126,6 +126,11 @@
   background-color: var(--light-clr);
 }
 
+.commune-map {
+  border: $border-md;
+  box-shadow: $box-shadow-medium;
+}
+
 // Evenement Section
 .evenement__textbox {
   width: min(100%, rem(800px));
