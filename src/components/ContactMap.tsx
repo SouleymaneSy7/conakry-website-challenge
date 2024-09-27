@@ -1,5 +1,7 @@
+import LeafletMapContainer from "./LeafletMapContainer";
+
 const ContactMap = () => {
-  return <div>ContactMap</div>;
+  return <LeafletMapContainer />
 };
 
 export default ContactMap;

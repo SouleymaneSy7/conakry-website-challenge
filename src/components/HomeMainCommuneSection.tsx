@@ -1,5 +1,6 @@
 import Container from "./Container";
 import { communeSection, communeSlider } from "../constants/homepage-constants";
+import LeafletMapContainer from "./LeafletMapContainer";
 
 const HomeMainCommuneSection = () => {
   return (
@@ -23,7 +24,9 @@ const HomeMainCommuneSection = () => {
             {/* Buttons */}
           </Container>
 
-          {/* <div className="commune-map"></div> */}
+          <div className="commune-map">
+            <LeafletMapContainer />
+          </div>
         </div>
       </div>
     </Container>
