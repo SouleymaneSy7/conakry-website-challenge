@@ -137,7 +137,7 @@ const discoverSection: discoverSectionTypes = {
   discoverTitle: "Découvrez Conakry en Vidéo",
   discoverDescription:
     "Plongez au cœur de Conakry à travers cette vidéo immersive qui met en lumière la beauté naturelle, la richesse culturelle et l’énergie vibrante de notre ville. Des plages dorées aux quartiers animés, des marchés traditionnels aux paysages enchanteurs, laissez-vous emporter par un voyage unique à la découverte de Conakry.Visionnez la vidéo et explorez une ville où chaque coin de rue raconte une histoire, et où la nature se mêle harmonieusement à un patrimoine culturel vivant. ",
-  // decouvrerVideo: ,
+  // discoverVideo: ,
 };
 
 // Commune Section
@@ -156,9 +156,27 @@ const communeSlider: CommuneSliderTypes = [
   },
   {
     id: 22,
+    sliderTitle: "Commune de Dixinn",
+    sliderDescription:
+      "Un pôle éducatif et résidentiel important, Dixinn est connue pour ses universités, dont l’Université de Conakry. C’est aussi ici que se trouve le Stade du 28 Septembre, l’un des lieux sportifs les plus célèbres du pays.",
+  },
+  {
+    id: 23,
+    sliderTitle: "Commune de Matam",
+    sliderDescription:
+      "Un quartier commercial et résidentiel, Matam offre un mélange de marchés traditionnels et d’industries locales. Découvrez les petites entreprises artisanales qui font partie du tissu économique local.",
+  },
+  {
+    id: 24,
     sliderTitle: "Commune de Ratoma",
     sliderDescription:
-      "Le cœur historique et administratif de Conakry. Kaloum abrite les institutions gouvernementales, les principaux bureaux d’affaires, ainsi que des sites emblématiques comme le Palais du Peuple et le Port Autonome de Conakry.",
+      "Ratoma est une zone en plein essor, connue pour sa population jeune et ses nombreux quartiers résidentiels. C’est un carrefour de la culture et de l’innovation, avec une scène artistique florissante et des initiatives locales dynamiques.",
+  },
+  {
+    id: 25,
+    sliderTitle: "Commune de Matoto",
+    sliderDescription:
+      "La plus grande commune de Conakry, Matoto est un centre industriel et commercial majeur. Elle abrite également l’aéroport international de Conakry, la porte d’entrée pour de nombreux visiteurs étrangers.",
   },
 ];
 
@@ -192,15 +210,6 @@ const evenementCards: EvenementCardsType = [
   },
   {
     id: 33,
-    // evenementCardImg: ,
-    evenementCardTitle: "Conakry Fashion Week",
-    evenementCardDate: "Août 2024",
-    evenementCardDescription:
-      "La semaine de la mode à Conakry présente les créations des stylistes guinéens et africains. Cet événement attire des designers, des influenceurs et des amateurs de mode de tout le continent.",
-    evenementCardBtn: "Réserver votre place",
-  },
-  {
-    id: 34,
     // evenementCardImg: ,
     evenementCardTitle: "Conakry Fashion Week",
     evenementCardDate: "Août 2024",
