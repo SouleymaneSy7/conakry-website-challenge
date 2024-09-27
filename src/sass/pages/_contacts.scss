@@ -49,7 +49,6 @@
     flex-direction: column;
     align-items: flex-start;
 
-    
     & textarea {
       width: 100%;
       height: rem(300px);
@@ -90,7 +89,10 @@
     padding: rem(12px);
 
     border-top: $border-md;
-    border-bottom: $border-md;
+
+    &.active {
+      border-bottom: $border-md;
+    }
 
     & button {
       border: none;
@@ -99,10 +101,6 @@
       padding: 0;
     }
   }
-
-  & .accordion__body {
-    // padding: rem(12px);
-    height: 0;
-    overflow: hidden;
-  }
 }
+
+
