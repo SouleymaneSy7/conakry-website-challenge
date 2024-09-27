@@ -126,7 +126,24 @@
   background-color: var(--light-clr);
 }
 
-.commune-map {
+.commune__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commune__card-container {
+  width: min(100%, rem(400px));
+}
+
+.commune__card-btn-container {
+  display: flex;
+  align-items: center;
+  gap: rem(16px);
+}
+
+.commune__map {
+  width: min(100%, rem(500px));
   border: $border-md;
   box-shadow: $box-shadow-medium;
 }
