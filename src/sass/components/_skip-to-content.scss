@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+
+.skip-to-content {
+  position: absolute;
+  top: rem(-40px);
+  left: 0;
+  z-index: 1000000;
+
+  color: var(--dark-clr);
+  text-decoration: none;
+
+  background: var(--body-bg-clr);
+  
+
+  padding: rem(10px);
+  transition: top 0.3s ease-in-out;
+}
+
+.skip-to-content:focus {
+  top: 0;
+
+  outline: none;
+  border: $border-md;
+  border-radius: 0;
+}
