@@ -20,26 +20,32 @@ const DestinationSectionContents = () => {
                   <p>{content.description}</p>
                 </div>
 
-                {/* <div className="destination-main__img">
-                <img src={content.img} alt="" />
-              </div> */}
+                <div className="destination__img">
+                  {/* <img src={content.img} alt={`${content.classNames} images`} /> */}
+                </div>
               </div>
 
               <div className="destination__cards-container">
                 {content.cards.map((card) => {
                   return (
                     <Container as={"article"} key={card.id} className="card">
-                      {/* <div className="card__img">
-                        <img src={card.img} alt="" />
-                      </div> */}
+                      <div className="card__img">
+                        {/* <img
+                          src={card.img}
+                          alt={`Image de ${card.cardTitle}`}
+                        /> */}
+                      </div>
 
                       <h3 className="card__title">{card.cardTitle}</h3>
                       <p className="card__description">
                         {card.cardDescription}
                       </p>
-                      <Button type="button" className="card--btn">
-                        {card.cardBtn}
-                      </Button>
+
+                      <div className="card__flex">
+                        <Button type="button" className="card--btn">
+                          {card.cardBtn}
+                        </Button>
+                      </div>
                     </Container>
                   );
                 })}
