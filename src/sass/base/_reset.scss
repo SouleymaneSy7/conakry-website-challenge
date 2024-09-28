@@ -108,3 +108,10 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
