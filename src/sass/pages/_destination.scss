@@ -3,10 +3,14 @@
 .destination-header,
 .destination__flex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: rem(32px);
+
+  @include media-queries(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .destination-header {
@@ -19,15 +23,16 @@
   }
 
   button {
+    width: min(100%, rem(270px));
     box-shadow: $box-shadow-medium;
 
-    padding: rem(12px) rem(48px) rem(10px);
+    padding: rem(12px) 0 rem(10px);
 
     margin-block-start: min(rem(40px), 2.222vh);
   }
 
   & .destination-header__img {
-    width: rem(500px);
+    width: min(100%, rem(500px));
     height: rem(400px);
 
     border: $border-sm;
@@ -42,20 +47,52 @@
   padding-block-end: rem(56px);
 
   & section {
-    padding-block: min(spacing(15), 8vh);
+    padding-block: rem(64px);
+
+    @include media-queries(md) {
+      padding-block: rem(96px);
+    }
   }
 }
 
 .destination__flex {
   gap: rem(24px);
+}
 
-  & .destination__text p {
+.destination__text {
+  width: min(100%, rem(540px));
+
+  & p {
     margin-block-start: rem(12px);
   }
 }
 
-// .destination__nature {
-//   background-color: purple;
+.destination__img {
+  width: min(100%, rem(500px));
+  height: rem(450px);
+
+  border: $border-md;
+  box-shadow: $box-shadow-medium;
+}
+
+@include media-queries(md) {
+  .destination__culture .destination__flex,
+  .destination__gastronomy .destination__flex,
+  .destination__nocturne .destination__flex {
+    flex-direction: row-reverse;
+  }
+}
+
+.destination__nature {
+  background-color: purple;
+}
+
+// .destination__culture {
+//   background-color: salmon;
+// }
+
+// .destination__evenement {
+//   background-color: salmon;
 // }
 
 // .destination__gastronomy {
@@ -66,13 +103,17 @@
 //   background-color: greenyellow;
 // }
 
+// .destination__nocturne {
+//   background-color: salmon;
+// }
+
 .destination__cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: rem(24px);
 
-  margin-block-start: min(rem(56px), 3.611vh);
+  margin-block-start: rem(56px);
 
   & > * {
     flex: 1 1 var(--card-width);
@@ -89,6 +130,7 @@
 
     &__img {
       width: 100%;
+      height: rem(250px);
       border: $border-sm;
 
       margin-block-end: rem(20px);
@@ -104,6 +146,11 @@
 
     &__description {
       margin-block-start: rem(4px);
+    }
+
+    &__flex {
+      display: flex;
+      justify-content: flex-end;
     }
 
     &--btn {
