@@ -37,10 +37,10 @@ const HomeMainCommuneSection = () => {
             </Container>
 
             <div className="commune__card-btn-container">
-              <Button type="button" className="prev-btn" onClick={prevHandler}>
+              <Button type="button" className="commune--btn" onClick={prevHandler}>
                 {"<"}
               </Button>
-              <Button type="button" className="next-btn" onClick={nextHandler}>
+              <Button type="button" className="commune--btn" onClick={nextHandler}>
                 {">"}
               </Button>
             </div>

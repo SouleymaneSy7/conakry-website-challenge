@@ -1,16 +1,13 @@
-import { heroSection } from "@/constants/homepage-constants";
 import Container from "./Container";
-import HeroSection from "./HeroSection";
+import HomeHeroSection from "./HomeHeroSection";
+import { heroSection } from "@/constants/homepage-constants";
 
 const HomeHeader = () => {
   const { heroTitle, heroBtnText } = heroSection;
 
   return (
-    <Container
-      as="header"
-      className="home-header | container"
-    >
-      <HeroSection heroTitle={heroTitle} heroBtnText={heroBtnText} />
+    <Container as="header" className="home-header | container">
+      <HomeHeroSection heroTitle={heroTitle} heroBtnText={heroBtnText} />
     </Container>
   );
 };
