@@ -23,11 +23,11 @@ const ContactForm = () => {
   const emailId = `${id}-email`;
   const messageId = `${id}-message`;
 
-  const emailRegEx = /^[\w-\\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const emailRegEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
   const handleNameError = () => {
     if (!firstName && !lastName) {
-      setNameErrorMsg("Entrer votre Nom ou Prénom, s'il vous plait!");
+      setNameErrorMsg("Oops ! Il semble que tu aies oublié ton prénom ! 😊");
     } else {
       setNameErrorMsg("");
     }
@@ -35,9 +35,11 @@ const ContactForm = () => {
 
   const handleEmailError = () => {
     if (!email) {
-      setEmailErrorMsg("Entrer votre Email, s'il vous plait!");
+      setEmailErrorMsg("Ton adresse email semble manquer à l'appel ! 🧐");
     } else if (!email.match(emailRegEx)) {
-      setEmailErrorMsg("S'il vous plait, Entrer un Email Valide!");
+      setEmailErrorMsg(
+        "Hmm... Ce n'est pas une adresse email valide. Essaie encore ! 😎"
+      );
     } else {
       setEmailErrorMsg("");
     }
@@ -45,9 +47,9 @@ const ContactForm = () => {
 
   const handleMessageError = () => {
     if (!message) {
-      setMessageErrorMsg("S'il vous plait, entrer un message!");
-    } else if (message.length < 4) {
-      setMessageErrorMsg("Parler nous plus!!!");
+      setMessageErrorMsg(
+        "Un petit message ? On aimerait bien lire ce que tu as à dire ! 😉"
+      );
     } else {
       setMessageErrorMsg("");
     }
@@ -68,43 +70,42 @@ const ContactForm = () => {
   return (
     <React.Fragment>
       {success ? (
-        <p>
-          Merci de nous envoyer un Message. On vous repondra dans de plus bref
-          delais!
-        </p>
+        <p>"Merci pour ton message ! Nous te répondrons bientôt ! 🎉"!</p>
       ) : (
         <Forms className="contact__form" onSubmit={handleSubmit}>
-          <div className="contact__form__flex">
-            <div>
-              <Inputs
-                id={firstNameId}
-                label="Nom"
-                type="text"
-                placeholder="John"
-                value={firstName}
-                onChange={(event) => {
-                  setFirstName(event.target.value);
-                }}
-              />
+          <div className="contact__form--name">
+            <div className="contact__form__flex">
+              <div>
+                <Inputs
+                  id={firstNameId}
+                  label="Nom"
+                  type="text"
+                  placeholder="John"
+                  value={firstName}
+                  onChange={(event) => {
+                    setFirstName(event.target.value);
+                  }}
+                />
+              </div>
 
-              <p>{NameErrorMsg}</p>
+              <div>
+                <Inputs
+                  id={lastNameId}
+                  label="Prénom"
+                  type="text"
+                  placeholder="Doe"
+                  value={lastName}
+                  onChange={(event) => {
+                    setLastName(event.target.value);
+                  }}
+                />
+              </div>
             </div>
 
-            <div>
-              <Inputs
-                id={lastNameId}
-                label="Prénom"
-                type="text"
-                placeholder="Doe"
-                value={lastName}
-                onChange={(event) => {
-                  setLastName(event.target.value);
-                }}
-              />
-            </div>
+            <small className="contact__form--errors">{NameErrorMsg}</small>
           </div>
 
-          <div>
+          <div className="contact__form--email">
             <Inputs
               id={emailId}
               label="Adresse e-mail "
@@ -116,14 +117,15 @@ const ContactForm = () => {
               }}
             />
 
-            <p>{emailErrorMsg}</p>
+            <small className="contact__form--errors">{emailErrorMsg}</small>
           </div>
 
-          <div>
+          <div className="contact__form__text-area-container">
             <Container as={"div"} className="contact__form__text-area">
               <label htmlFor={messageId}>
                 Message <span>*</span>
               </label>
+
               <textarea
                 id={messageId}
                 value={message}
@@ -133,7 +135,7 @@ const ContactForm = () => {
               ></textarea>
             </Container>
 
-            <p>{messageErrorMsg}</p>
+            <small className="contact__form--errors">{messageErrorMsg}</small>
           </div>
 
           <Button type="submit" className="contact__form--btn">
