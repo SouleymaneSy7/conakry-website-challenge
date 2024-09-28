@@ -7,10 +7,12 @@ import NavBar from "./components/NavBar";
 import NotFound from "./pages/NotFound";
 import React from "react";
 import Footer from "./components/Footer";
+import SkipToContents from "./components/SkipToContents";
 
 const App = () => {
   return (
     <React.Fragment>
+      <SkipToContents />
       <NavBar />
 
       <Routes>
