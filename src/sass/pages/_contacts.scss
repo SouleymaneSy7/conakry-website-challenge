@@ -14,20 +14,20 @@
 
   @include media-queries(lg) {
     flex-direction: row;
-    align-items: flex-start;
   }
 }
 
 .contact__intro {
-  width: min(100%, rem(600px));
+  width: min(100%, rem(700px));
 
-  & > * {
+  & > p {
     margin-block-start: rem(12px);
   }
 }
 
 .contact__form {
   width: min(100%, rem(500px));
+  margin-inline: auto;
 
   & > * {
     width: 100%;
@@ -38,10 +38,8 @@
   }
 
   &__flex {
-    @include media-queries(md) {
-      display: flex;
-      gap: rem(12px);
-    }
+    display: flex;
+    gap: rem(12px);
   }
 
   &__text-area {
@@ -64,6 +62,39 @@
 
   &--btn {
     padding-block: rem(12px);
+  }
+
+  &--errors {
+    font-size: $font-size-300;
+    font-weight: $font-weight-bold;
+    color: red;
+  }
+}
+
+.contact__form--success {
+  width: min(100%, rem(580px));
+  height: rem(448px);
+
+  display: grid;
+  place-items: center;
+}
+
+.contact__map {
+margin-inline: auto;
+
+  width: min(100%, rem(500px));
+  height: rem(300px);
+
+  border: $border-md;
+  box-shadow: $box-shadow-medium;
+
+  @include media-queries(lg) {
+    width: min(100%, rem(700px));
+    height: auto;
+  }
+
+  & .leaflet-container {
+    height: 100%;
   }
 }
 
@@ -101,6 +132,8 @@
       padding: 0;
     }
   }
+
+  & .accordion__body {
+    padding: rem(12px);
+  }
 }
-
-

@@ -216,8 +216,18 @@
 
 .commune__map {
   width: min(100%, rem(700px));
+  height: rem(300px);
+
   border: $border-md;
   box-shadow: $box-shadow-medium;
+
+  & .leaflet-container {
+    height: 100%;
+  }
+
+  @include media-queries(md) {
+    height: rem(450px);
+  }
 }
 
 // Evenement Section
@@ -252,7 +262,7 @@
   & .evenement-card__textbox {
     width: min(100%, rem(520px));
 
-    & > *+* {
+    & > * + * {
       margin-block-start: rem(8px);
     }
   }
