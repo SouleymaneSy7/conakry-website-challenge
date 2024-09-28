@@ -15,9 +15,7 @@ const ContactMain = () => {
             <ContactForm />
           </div>
 
-          <div>
-            <ContactMap />
-          </div>
+          <ContactMap />
         </div>
       </Container>
 

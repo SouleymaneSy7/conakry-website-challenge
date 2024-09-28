@@ -1,4 +1,4 @@
-import React, { FormEvent } from "react";
+import React, { type FormEvent } from "react";
 
 import Forms from "./Forms";
 import Inputs from "./Inputs";
@@ -70,7 +70,9 @@ const ContactForm = () => {
   return (
     <React.Fragment>
       {success ? (
-        <p>"Merci pour ton message ! Nous te répondrons bientôt ! 🎉"!</p>
+        <Container as={"div"} className="contact__form--success">
+          <p>Merci pour ton message ! Nous te répondrons bientôt ! 🎉</p>
+        </Container>
       ) : (
         <Forms className="contact__form" onSubmit={handleSubmit}>
           <div className="contact__form--name">
