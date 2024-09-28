@@ -15,7 +15,7 @@ const LeafletMapContainer = () => {
       center={[lat, long]}
       zoom={12}
       scrollWheelZoom={false}
-      style={{ width: "100%", height: "450px" }}
+      style={{ width: "100%" }}
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
