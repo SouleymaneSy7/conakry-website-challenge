@@ -27,7 +27,8 @@
   }
 
   & .hero-section--btn {
-    padding: rem(14px) rem(48px) rem(12px);
+    width: min(100%, rem(380px));
+    padding: rem(14px) 0 rem(12px);
     margin-block-start: rem(32px);
   }
 
@@ -43,16 +44,24 @@
 .home-main {
   & section .container > div:nth-child(2),
   & section > div:nth-child(2) {
-    margin-block-start: min(rem(28px), 3vh);
+    margin-block-start: min(rem(48px), 3vh);
+
+    @include media-queries(lg) {
+      margin-block-start: min(rem(64px), 4vh);
+    }
   }
 
   & section > div:nth-child(1) p {
-    margin-block-start: rem(4px);
+    margin-block-start: rem(8px);
+
+    @include media-queries(lg) {
+      margin-block-start: rem(12px);
+    }
   }
 
   @include media-queries(md) {
-    & section.container {
-      padding-block: min(rem(140px), 5vh);
+    & section {
+      padding-block: rem(96px);
     }
   }
 }
@@ -64,34 +73,85 @@
 
 .explore__flex {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(32px);
+
+  @include media-queries(md) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
 
 .explore__textbox {
   width: min(100%, rem(550px));
 }
 
-.explore-card-container {
+.explore--btn-container {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
   gap: rem(16px);
+
+  & .explore--btn {
+    padding: rem(10px) rem(32px);
+  }
+}
+.explore-card-wrapper {
+  width: 100%;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+  cursor: grab;
+
+  padding-block: rem(12px);
+
+  & .explore-card-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: rem(24px);
+    transition: transform 0.5s ease;
+  }
 }
 
 .explore-card {
+  width: min(100%, rem(330px));
+
   background-color: var(--body-bg-clr);
   border: $border-md;
   box-shadow: $box-shadow-medium;
 
   padding: rem(20px);
 
+  &__img {
+    width: 100%;
+    height: rem(300px);
+
+    border: $border-md;
+
+    & img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
   &__title {
+    width: rem(300px);
     margin-block-start: rem(20px);
   }
 
   &__description {
+    width: fit-content;
     margin-block-start: rem(4px);
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   &--btn {
@@ -128,8 +188,14 @@
 
 .commune__flex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: rem(32px);
+
+  @include media-queries(lg) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .commune__card-container {
@@ -140,10 +206,16 @@
   display: flex;
   align-items: center;
   gap: rem(16px);
+
+  margin-block-start: rem(24px);
+
+  & .commune--btn {
+    padding: rem(8px) rem(32px);
+  }
 }
 
 .commune__map {
-  width: min(100%, rem(500px));
+  width: min(100%, rem(700px));
   border: $border-md;
   box-shadow: $box-shadow-medium;
 }
@@ -171,10 +243,23 @@
 
     border: $border-md;
     box-shadow: $box-shadow-medium;
+
+    @include media-queries(md) {
+      height: rem(300px);
+    }
   }
 
   & .evenement-card__textbox {
     width: min(100%, rem(520px));
+
+    & > *+* {
+      margin-block-start: rem(8px);
+    }
+  }
+
+  &--btn {
+    width: min(100%, rem(240px));
+    padding-block: rem(10px);
   }
 
   @include media-queries(md) {
@@ -184,6 +269,8 @@
 }
 
 .evenement--btn {
-  padding: rem(12px) rem(48px) rem(10px);
+  width: min(100%, rem(200px));
+  padding: rem(12px) 0 rem(10px);
   margin-block-start: rem(40px);
+  margin-inline: auto;
 }

@@ -2,6 +2,10 @@
 
 .navigation {
   padding-block: rem(20px);
+
+  @include media-queries(md) {
+    padding-block: rem(32px);
+  }
 }
 
 .navigation__logo {
@@ -36,6 +40,15 @@
   box-shadow: none;
   background: none;
 
+  & span {
+    display: inline-block;
+
+    width: 100%;
+    height: rem(5px);
+
+    background-color: var(--dark-clr);
+  }
+
   &.active .line-top {
     transform: rotate(45deg) translate(rem(6px), rem(-3px));
     transform-origin: 0% 0%;
@@ -48,15 +61,6 @@
 
   &.active .line-bottom {
     transform: rotate(-45deg) translate(rem(7px), rem(-6px));
-  }
-
-  & span {
-    display: inline-block;
-
-    width: 100%;
-    height: rem(5px);
-
-    background-color: var(--dark-clr);
   }
 }
 
@@ -85,7 +89,7 @@
       flex-direction: column;
       justify-content: flex-start;
 
-      gap: rem(32px);
+      gap: rem(40px);
 
       margin-block-end: rem(48px);
 
@@ -96,7 +100,8 @@
     }
 
     & .navigation-mobile--btn {
-      padding: rem(12px) rem(32px) rem(10px);
+      width: min(100%, rem(220px));
+      padding: rem(12px) 0 rem(10px);
     }
   }
 }
@@ -117,11 +122,12 @@
     & ul {
       display: flex;
       align-items: center;
-      gap: rem(32px);
+      gap: rem(40px);
     }
   }
 }
 
 .navigation--btn {
-  padding: rem(10px) rem(24px) rem(8px);
+  width: min(100%, rem(220px));
+  padding-block: rem(10px);
 }
