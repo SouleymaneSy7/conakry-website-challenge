@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+.errors-page section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  width: 100%;
+}
+
+.errors__illustration {
+  @include x-fluid-width(rem(600px));
+  height: rem(600px);
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.errors--link {
+  font-size: rem(18px);
+  font-weight: $font-weight-bold;
+  color: $text-color-default;
+  text-decoration: underline;
+}
