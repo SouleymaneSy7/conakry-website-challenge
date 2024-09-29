@@ -71,7 +71,7 @@ export const CrossIcon = (props: SVGProps<SVGSVGElement>) => {
 
 export const ChevronLeftIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" {...props}>
       <path d="m10 2 2 2.242L8.242 8 12 11.758 10 14 4 8z" />
     </svg>
   );
@@ -79,7 +79,7 @@ export const ChevronLeftIcon = (props: SVGProps<SVGSVGElement>) => {
 
 export const ChevronRightIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 20" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" {...props}>
       <path d="M6 2 4 4.242 7.758 8 4 11.758 6 14l6-6z" />
     </svg>
   );
