@@ -102,16 +102,14 @@
 .explore-card-wrapper {
   width: 100%;
   transition: transform 0.5s ease;
-  overflow: hidden;
 
   padding-block: rem(12px);
 
   & .explore-card-container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, rem(300px)), 1fr));
+    justify-content: center;
     gap: rem(24px);
-    transition: transform 0.5s ease;
   }
 }
 

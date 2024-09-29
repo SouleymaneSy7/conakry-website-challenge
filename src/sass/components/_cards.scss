@@ -5,8 +5,6 @@
 // ======================
 
 .explore-card {
-  width: min(100%, rem(330px));
-
   background-color: var(--body-bg-clr);
   border: $border-md;
   box-shadow: $box-shadow-medium;
@@ -29,7 +27,6 @@
   }
 
   &__title {
-    width: rem(300px);
     margin-block-start: rem(20px);
   }
 
