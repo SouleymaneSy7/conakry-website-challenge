@@ -1,4 +1,4 @@
-import React from "React";
+import React from "react";
 
 import Title from "./Title";
 import Button from "./Buttons";
@@ -7,6 +7,7 @@ import VisuallyHidden from "./VisuallyHidden";
 import LeafletMapContainer from "./LeafletMapContainer";
 
 import { communeSection, communeSlider } from "../constants/homepage-constants";
+import { ChevronLeftIcon, ChevronRightIcon } from "@/icons/Icons.component";
 
 const HomeMainCommuneSection = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -47,7 +48,7 @@ const HomeMainCommuneSection = () => {
                 onClick={prevHandler}
                 aria-label="Précédent"
               >
-                {"<"}
+                <ChevronLeftIcon width={48} />
                 <VisuallyHidden>Précédent</VisuallyHidden>
               </Button>
 
@@ -57,7 +58,7 @@ const HomeMainCommuneSection = () => {
                 onClick={nextHandler}
                 aria-label="Suivant"
               >
-                {">"}
+                <ChevronRightIcon width={48} />
                 <VisuallyHidden>Suivant</VisuallyHidden>
               </Button>
             </div>

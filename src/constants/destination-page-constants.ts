@@ -1,5 +1,5 @@
 // Types
-export type DestinationHeroSectionTypes = {
+export type DestinationHeroSectionContentsTypes = {
   // heroImg: string;
   heroTitle: string;
   heroDescription: string;
@@ -15,7 +15,7 @@ export type CardsTypes = {
 }[];
 
 // Hero Section
-const destinationHeroSection: DestinationHeroSectionTypes = {
+const destinationHeroSectionContents: DestinationHeroSectionContentsTypes = {
   // heroImg: ,
   heroTitle:
     "Découvrez Conakry – Le carrefour culturel et naturel de la Guinée.",
@@ -252,4 +252,4 @@ const destinationContents = [
   },
 ];
 
-export { destinationHeroSection, destinationContents };
+export { destinationHeroSectionContents, destinationContents };

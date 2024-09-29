@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { Logo } from "@/icons/Icons.component";
+import { HamburgerMenuIcon, Logo } from "@/icons/Icons.component";
 import { navBarBtn } from "@/constants/homepage-constants";
 
 import Button from "./Buttons";
@@ -37,11 +37,14 @@ const NavBar = () => {
             aria-expanded={isOpen}
             aria-controls="menu"
           >
-            <span className="line-top"></span>
-            <span className="line-center"></span>
-            <span className="line-bottom"></span>
+            <HamburgerMenuIcon width={48} />
             <VisuallyHidden>Ouvrir le menu de navigation mobile</VisuallyHidden>
           </Button>
+
+          <NavBarMobile
+            isOpen={isOpen}
+            handleIsOpen={handleOpen}
+          />
         </Container>
 
         <Container as={"div"} className="navigation-desktop | container">
@@ -55,8 +58,6 @@ const NavBar = () => {
           </Button>
         </Container>
       </nav>
-
-      <NavBarMobile isOpen={isOpen} />
     </React.Fragment>
   );
 };

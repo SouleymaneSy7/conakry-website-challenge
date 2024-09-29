@@ -1,7 +1,6 @@
 import {
   FacebookIcon,
   InstragramIcon,
-  TikTokIcon,
   TwitterIcon,
   YoutubeIcon,
 } from "@/icons/Icons.component";
@@ -351,7 +350,6 @@ const footerSocialIcons = [
   FacebookIcon,
   InstragramIcon,
   TwitterIcon,
-  TikTokIcon,
   YoutubeIcon,
 ];
 

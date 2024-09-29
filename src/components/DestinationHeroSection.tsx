@@ -2,13 +2,13 @@ import Title from "./Title";
 import Button from "./Buttons";
 import Container from "./Container";
 
-import { DestinationHeroSectionTypes } from "@/constants/destination-page-constants";
+import { DestinationHeroSectionContentsTypes } from "@/constants/destination-page-constants";
 
 const DestinationHeroSection = ({
   heroTitle,
   heroDescription,
   heroBtn,
-}: DestinationHeroSectionTypes) => {
+}: DestinationHeroSectionContentsTypes) => {
   return (
     <Container as={"section"} className="destination-header | container">
       <div className="destination-header__textbox">

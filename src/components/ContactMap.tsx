@@ -1,6 +1,6 @@
 import Container from "./Container";
 import VisuallyHidden from "./VisuallyHidden";
-import LeafletMapContainer from "./LeafletMapContainer";
+// import LeafletMapContainer from "./LeafletMapContainer";
 
 const ContactMap = () => {
   return (
@@ -9,7 +9,7 @@ const ContactMap = () => {
       className="contact__map"
       aria-label="Carte interactive de Conakry"
     >
-      <LeafletMapContainer />
+      {/* <LeafletMapContainer /> */}
       <VisuallyHidden>Carte interactive de Conakry</VisuallyHidden>
     </Container>
   );

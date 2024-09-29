@@ -4,6 +4,7 @@ import Container from "./Container";
 import VisuallyHidden from "./VisuallyHidden";
 
 import { exploreCards, exploreSection } from "@/constants/homepage-constants";
+import { ChevronLeftIcon, ChevronRightIcon } from "@/icons/Icons.component";
 
 const HomeMainExploreSection = () => {
   return (
@@ -17,12 +18,12 @@ const HomeMainExploreSection = () => {
 
           <div className="explore--btn-container">
             <Button type="button" className="explore--btn">
-              Left
+              <ChevronLeftIcon width={24} height={24} />
               <VisuallyHidden>Swipper vers la gauche</VisuallyHidden>
             </Button>
 
             <Button type="button" className="explore--btn">
-              Right
+              <ChevronRightIcon width={24} height={24} />
               <VisuallyHidden>Swipper vers la droite</VisuallyHidden>
             </Button>
           </div>
