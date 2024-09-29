@@ -24,6 +24,7 @@ const FooterNewsletter = () => {
           type="email"
           placeholder={newsletterInputPlaceholder}
           className="footer__newsletter__form__input"
+          required
         />
         <Button
           type="submit"

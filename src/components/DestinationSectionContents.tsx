@@ -31,23 +31,23 @@ const DestinationSectionContents = () => {
               <div className="destination__cards-container">
                 {content.cards.map((card) => {
                   return (
-                    <Container as={"article"} key={card.id} className="card">
-                      <div className="card__img">
+                    <Container as={"article"} key={card.id} className="destination-card">
+                      <div className="destination-card__img">
                         {/* <img
                           src={card.img}
                           alt={`Image de ${card.cardTitle}`}
                         /> */}
                       </div>
 
-                      <Title level="h3" className="card__title">
+                      <Title level="h3" className="destination-card__title">
                         {card.cardTitle}
                       </Title>
-                      <p className="card__description">
+                      <p className="destination-card__description">
                         {card.cardDescription}
                       </p>
 
-                      <div className="card__flex">
-                        <Button type="button" className="card--btn">
+                      <div className="destination-card__flex">
+                        <Button type="button" className="destination-card--btn">
                           {card.cardBtn}
                         </Button>
                       </div>
@@ -60,7 +60,7 @@ const DestinationSectionContents = () => {
         );
       })}
 
-      <div className="destination--btn">
+      <div className="destination--btn | container">
         <Button type="button">Voir plus</Button>
       </div>
     </React.Fragment>

@@ -43,9 +43,11 @@ const HomeMainEvenementSection = () => {
         })}
       </Container>
 
-      <Button type="button" className="evenement--btn">
-        Voir plus
-      </Button>
+      <div className="evenement--btn">
+        <Button type="button">
+          Voir plus
+        </Button>
+      </div>
     </Container>
   );
 };

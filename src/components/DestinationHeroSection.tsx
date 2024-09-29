@@ -14,7 +14,7 @@ const DestinationHeroSection = ({
       <div className="destination-header__textbox">
         <Title level="h1">{heroTitle}</Title>
         <p>{heroDescription}</p>
-        <Button type="button">{heroBtn}</Button>
+        <Button type="button" className="destination-header--btn">{heroBtn}</Button>
       </div>
 
       <div className="destination-header__img">

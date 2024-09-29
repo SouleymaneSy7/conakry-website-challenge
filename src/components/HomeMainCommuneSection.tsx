@@ -48,7 +48,7 @@ const HomeMainCommuneSection = () => {
                 onClick={prevHandler}
                 aria-label="Précédent"
               >
-                <ChevronLeftIcon width={48} />
+                <ChevronLeftIcon width={24} height={24} />
                 <VisuallyHidden>Précédent</VisuallyHidden>
               </Button>
 
@@ -58,7 +58,7 @@ const HomeMainCommuneSection = () => {
                 onClick={nextHandler}
                 aria-label="Suivant"
               >
-                <ChevronRightIcon width={48} />
+                <ChevronRightIcon width={24} height={24} />
                 <VisuallyHidden>Suivant</VisuallyHidden>
               </Button>
             </div>

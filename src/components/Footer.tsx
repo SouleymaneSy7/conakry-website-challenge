@@ -14,10 +14,12 @@ const Footer = () => {
     <footer className="footer">
       <Container as={"section"} className="container">
         <div className="footer__top">
-          <Link to={"/"} className="footer__logo">
-            <FooterLogo />
-            <VisuallyHidden>Logo du site web de Conakry</VisuallyHidden>
-          </Link>
+          <div className="footer__logo">
+            <Link to={"/"} >
+              <FooterLogo />
+              <VisuallyHidden>Logo du site web de Conakry</VisuallyHidden>
+            </Link>
+          </div>
           <FooterElements />
           <FooterNewsletter />
         </div>

@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithRef, RefObject } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { createPortal } from "react-dom";
 import FocusLock from "react-focus-lock";
@@ -6,10 +6,9 @@ import FocusLock from "react-focus-lock";
 import Button from "./Buttons";
 import VisuallyHidden from "./VisuallyHidden";
 
-import useDisableBodyScroll from "@/hooks/useOnDisableBodyScroll";
-import useOnClickOutside from "@/hooks/useOnClickOutside";
 import { CrossIcon } from "@/icons/Icons.component";
 import { navBarBtn, navBarList } from "@/constants/homepage-constants";
+import useDisableBodyScroll from "@/hooks/useOnDisableBodyScroll";
 
 const mobileNavDOM = document.querySelector("#mobile-navbar-root");
 
@@ -19,12 +18,7 @@ type NavbarMobilePropsTypes = {
 };
 
 const NavBarMobile = ({ isOpen, handleIsOpen }: NavbarMobilePropsTypes) => {
-  const navigationMenuRef = React.useRef<HTMLDivElement>(null);
-
   useDisableBodyScroll(isOpen);
-  useOnClickOutside(navigationMenuRef, () => {
-    handleIsOpen();
-  });
   return (
     <React.Fragment>
       {isOpen
@@ -36,7 +30,6 @@ const NavBarMobile = ({ isOpen, handleIsOpen }: NavbarMobilePropsTypes) => {
                     ? "navigation-mobile-container active"
                     : "navigation-mobile-container"
                 }
-                ref={navigationMenuRef}
               >
                 <div className="navigation-mobile__header">
                   <Button
