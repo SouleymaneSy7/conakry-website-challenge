@@ -5,7 +5,6 @@ import {
   YoutubeIcon,
 } from "@/icons/Icons.component";
 import {
-  another,
   bookImg,
   fashionWeek,
   festival,
