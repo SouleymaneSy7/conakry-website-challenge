@@ -43,10 +43,10 @@ const HomeMainExploreSection = () => {
                   className="explore-card"
                 >
                   <div className="explore-card__img">
-                    {/* <img
-                      src={card.cardImg}
+                    <img
+                      src={card.cardImage}
                       alt={`Images de ${card.cardTitle}`}
-                    /> */}
+                    />
                   </div>
 
                   <Title level="h3" className="explore-card__title">

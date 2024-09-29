@@ -24,19 +24,23 @@ const DestinationSectionContents = () => {
                 </div>
 
                 <div className="destination__img">
-                  {/* <img src={content.img} alt={`${content.classNames} images`} /> */}
+                  <img src={content.img} alt={`${content.classNames} images`} />
                 </div>
               </div>
 
               <div className="destination__cards-container">
                 {content.cards.map((card) => {
                   return (
-                    <Container as={"article"} key={card.id} className="destination-card">
+                    <Container
+                      as={"article"}
+                      key={card.id}
+                      className="destination-card"
+                    >
                       <div className="destination-card__img">
-                        {/* <img
-                          src={card.img}
+                        <img
+                          src={card.cardImg}
                           alt={`Image de ${card.cardTitle}`}
-                        /> */}
+                        />
                       </div>
 
                       <Title level="h3" className="destination-card__title">

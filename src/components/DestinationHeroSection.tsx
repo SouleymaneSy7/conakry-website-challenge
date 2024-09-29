@@ -8,6 +8,7 @@ const DestinationHeroSection = ({
   heroTitle,
   heroDescription,
   heroBtn,
+  heroImg
 }: DestinationHeroSectionContentsTypes) => {
   return (
     <Container as={"section"} className="destination-header | container">
@@ -18,7 +19,7 @@ const DestinationHeroSection = ({
       </div>
 
       <div className="destination-header__img">
-        {/* <img src="" alt="" /> */}
+        <img src={heroImg} alt="Ville de conakry, vue d'en haut." />
       </div>
     </Container>
   );

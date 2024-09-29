@@ -20,7 +20,10 @@ const HomeMainEvenementSection = () => {
           return (
             <Container as={"article"} key={card.id} className="evenement-card">
               <div className="evenement-card__img">
-                {/* <img src="" alt="" /> */}
+                <img
+                  src={card.evenementCardImg}
+                  alt={`Image de ${card.evenementCardTitle}`}
+                />
               </div>
 
               <div className="evenement-card__textbox">
@@ -44,9 +47,7 @@ const HomeMainEvenementSection = () => {
       </Container>
 
       <div className="evenement--btn">
-        <Button type="button">
-          Voir plus
-        </Button>
+        <Button type="button">Voir plus</Button>
       </div>
     </Container>
   );

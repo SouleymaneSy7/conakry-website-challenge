@@ -3,7 +3,7 @@ import HomeHeroSection from "./HomeHeroSection";
 import { heroSection } from "@/constants/homepage-constants";
 
 const HomeHeader = () => {
-  const { heroTitle, heroBtnText } = heroSection;
+  const { heroTitle, heroBtnText, heroImage } = heroSection;
 
   return (
     <Container
@@ -12,7 +12,7 @@ const HomeHeader = () => {
       className="home-header | container"
       role="banner"
     >
-      <HomeHeroSection heroTitle={heroTitle} heroBtnText={heroBtnText} />
+      <HomeHeroSection heroTitle={heroTitle} heroImage={heroImage} heroBtnText={heroBtnText} />
     </Container>
   );
 };

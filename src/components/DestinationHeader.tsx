@@ -3,7 +3,7 @@ import DestinationHeroSection from "./DestinationHeroSection";
 import { destinationHeroSectionContents } from "@/constants/destination-page-constants";
 
 const DestinationHeader = () => {
-  const { heroTitle, heroDescription, heroBtn } = destinationHeroSectionContents;
+  const { heroTitle, heroDescription, heroBtn, heroImg } = destinationHeroSectionContents;
  
   return (
     <Container as="header" role="banner" id="main-content">
@@ -11,6 +11,7 @@ const DestinationHeader = () => {
         heroTitle={heroTitle}
         heroDescription={heroDescription}
         heroBtn={heroBtn}
+        heroImg={heroImg}
       />
     </Container>
   );
