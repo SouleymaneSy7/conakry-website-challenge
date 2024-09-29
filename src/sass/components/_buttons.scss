@@ -11,3 +11,163 @@ button {
 
   cursor: pointer;
 }
+
+.navigation--btn,
+.navigation-mobile--btn {
+  width: min(100%, rem(220px));
+  background-color: var(--primary-clr);
+  padding-block: rem(10px);
+}
+
+.navigation-mobile--close-btn {
+  width: rem(48px);
+  height: rem(48px);
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--primary-low-accent-clr);
+}
+
+.hero-section--btn {
+  width: min(100%, rem(380px));
+
+  background-color: var(--primary-clr);
+
+  margin-block-start: rem(32px);
+  padding: rem(14px) 0 rem(12px);
+}
+
+.explore--btn {
+  display: grid;
+  place-items: center;
+
+  width: rem(72px);
+  height: rem(38px);
+
+  background-color: var(--primary-low-accent-clr);
+}
+
+.explore-card--btn {
+  box-shadow: none;
+
+  padding: rem(8px) rem(32px) rem(6px);
+  margin-block-start: rem(28px);
+
+  background-color: var(--primary-accent-clr);
+}
+
+.commune--btn {
+  display: grid;
+  place-items: center;
+
+  width: rem(72px);
+  height: rem(38px);
+
+  background-color: var(--primary-low-accent-clr);
+}
+
+.evenement--btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  & button {
+    width: 100%;
+    background-color: var(--primary-clr);
+
+    margin-block-start: rem(52px);
+    padding: rem(12px) 0 rem(10px);
+  }
+
+  @include media-queries(sm) {
+    & button {
+      width: min(100%, rem(200px));
+    }
+  }
+}
+
+.footer__newsletter__form--btn {
+  --text-color: #{$text-color-default};
+  --color: var(--footer-title-clr);
+  --border-clr: transparent;
+
+  font-size: $font-size-400;
+  font-weight: $font-weight-bold;
+  color: var(--text-color);
+
+  background-color: var(--color);
+
+  border: rem(2px) solid var(--border-clr);
+  box-shadow: none;
+
+  padding-block: rem(12px);
+
+  &:is(:hover, :focus) {
+    --color: transparent;
+    --border-clr: var(--footer-title-clr);
+    --text-color: var(--footer-title-clr);
+  }
+}
+
+// ===============================
+//           Destination
+// ===============================
+
+.destination-header--btn {
+  width: min(100%, rem(270px));
+
+  background-color: var(--primary-clr);
+  box-shadow: $box-shadow-medium;
+
+  padding: rem(12px) 0 rem(10px);
+  margin-block-start: min(rem(40px), 2.222vh);
+}
+
+.destination-card--btn {
+  border: $border-sm;
+  box-shadow: none;
+  background-color: var(--primary-accent-clr);
+
+  padding: rem(10px) rem(32px) rem(6px);
+  margin-block-start: rem(16px);
+}
+
+.destination--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-block-start: rem(24px);
+
+  & button {
+    width: 100%;
+    background-color: var(--primary-clr);
+
+    padding: rem(12px) 0 rem(10px);
+
+    @include media-queries(sm) {
+      width: rem(245px);
+    }
+  }
+}
+
+// ===============================
+//           History
+// ===============================
+
+.history--btn {
+  background-color: var(--primary-clr);
+
+  padding: rem(12px) rem(48px) rem(10px);
+  margin-block-start: rem(40px);
+}
+
+// ===============================
+//           Contacts
+// ===============================
+
+.contact__form--btn {
+  padding-block: rem(12px);
+  background-color: var(--primary-clr);
+}

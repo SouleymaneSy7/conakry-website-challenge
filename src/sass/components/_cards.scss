@@ -1,0 +1,123 @@
+@use "../abstracts/" as *;
+
+// ======================
+//       Home Card
+// ======================
+
+.explore-card {
+  width: min(100%, rem(330px));
+
+  background-color: var(--body-bg-clr);
+  border: $border-md;
+  box-shadow: $box-shadow-medium;
+
+  padding: rem(20px);
+
+  &__img {
+    width: 100%;
+    height: rem(300px);
+
+    border: $border-md;
+
+    & img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &__title {
+    width: rem(300px);
+    margin-block-start: rem(20px);
+  }
+
+  &__description {
+    width: fit-content;
+    margin-block-start: rem(4px);
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.evenement-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(32px);
+
+  &__img {
+    width: min(100%, rem(500px));
+    height: rem(250px);
+
+    border: $border-md;
+    box-shadow: $box-shadow-medium;
+
+    @include media-queries(md) {
+      height: rem(300px);
+    }
+  }
+
+  & .evenement-card__textbox {
+    width: min(100%, rem(520px));
+
+    & > * + * {
+      margin-block-start: rem(8px);
+    }
+  }
+
+  &--btn {
+    width: min(100%, rem(240px));
+    padding-block: rem(10px);
+    background-color: var(--primary-accent-clr);
+  }
+
+  @include media-queries(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+// ==============================
+//       Destination Card
+// ==============================
+
+.destination-card {
+  width: min(100%, var(--card-width));
+
+  border: $border-sm;
+  box-shadow: $box-shadow-medium;
+  background-color: var(--light-clr);
+
+  padding: rem(20px);
+
+  &__img {
+    width: 100%;
+    height: rem(250px);
+    border: $border-sm;
+
+    margin-block-end: rem(20px);
+
+    & img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  &__description {
+    margin-block-start: rem(4px);
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

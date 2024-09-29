@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+// ====================
+//        Header
+// ====================
+
 .home-header {
   min-height: calc(100vh - rem(90px));
 
@@ -8,11 +12,13 @@
   // }
 }
 
-.home-header .hero-section {
+.hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: rem(32px);
+
+  text-align: center;
 
   & .hero-section__textbox {
     width: min(100%, rem(500px));
@@ -26,24 +32,20 @@
     box-shadow: $box-shadow-large;
   }
 
-  & .hero-section--btn {
-    width: min(100%, rem(380px));
-    padding: rem(14px) 0 rem(12px);
-    margin-block-start: rem(32px);
-  }
-
   @include media-queries(md) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
+    text-align: left;
+
     padding-block: rem(120px);
   }
 }
 
-.home-main {
-  & section .container > div:nth-child(2),
-  & section > div:nth-child(2) {
+.home-main section {
+  & .container > div:nth-child(2),
+  & > div:nth-child(2) {
     margin-block-start: min(rem(48px), 3vh);
 
     @include media-queries(lg) {
@@ -51,7 +53,7 @@
     }
   }
 
-  & section > div:nth-child(1) p {
+  & > div:nth-child(1) p {
     margin-block-start: rem(8px);
 
     @include media-queries(lg) {
@@ -60,13 +62,16 @@
   }
 
   @include media-queries(md) {
-    & section {
+    & {
       padding-block: rem(96px);
     }
   }
 }
 
-// Explore Section
+// =================================
+//          Explore Section
+// =================================
+
 .explore-section {
   background-color: var(--light-clr);
 }
@@ -92,16 +97,12 @@
   display: flex;
   align-items: center;
   gap: rem(16px);
-
-  & .explore--btn {
-    padding: rem(10px) rem(32px);
-  }
 }
+
 .explore-card-wrapper {
   width: 100%;
   transition: transform 0.5s ease;
   overflow: hidden;
-  cursor: grab;
 
   padding-block: rem(12px);
 
@@ -114,55 +115,10 @@
   }
 }
 
-.explore-card {
-  width: min(100%, rem(330px));
+// =================================
+//          Discover Section
+// =================================
 
-  background-color: var(--body-bg-clr);
-  border: $border-md;
-  box-shadow: $box-shadow-medium;
-
-  padding: rem(20px);
-
-  &__img {
-    width: 100%;
-    height: rem(300px);
-
-    border: $border-md;
-
-    & img {
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-      aspect-ratio: 1 / 1;
-    }
-  }
-
-  &__title {
-    width: rem(300px);
-    margin-block-start: rem(20px);
-  }
-
-  &__description {
-    width: fit-content;
-    margin-block-start: rem(4px);
-  }
-
-  &-flex {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  &--btn {
-    box-shadow: none;
-
-    padding: rem(8px) rem(32px) rem(6px);
-    margin-block-start: rem(28px);
-  }
-}
-
-// Discover Section
 .discover__textbox {
   width: min(100%, rem(980px));
 }
@@ -181,7 +137,10 @@
   margin-inline: auto;
 }
 
-// Commune Section
+// =================================
+//          Commune Section
+// =================================
+
 .commune-section {
   background-color: var(--light-clr);
 }
@@ -208,18 +167,18 @@
   gap: rem(16px);
 
   margin-block-start: rem(24px);
-
-  & .commune--btn {
-    padding: rem(8px) rem(32px);
-  }
 }
 
 .commune__map {
-  width: min(100%, rem(700px));
+  width: 100%;
   height: rem(300px);
 
   border: $border-md;
   box-shadow: $box-shadow-medium;
+
+  @include media-queries(lg) {
+    width: min(100%, rem(700px));
+  }
 
   & .leaflet-container {
     height: 100%;
@@ -230,7 +189,10 @@
   }
 }
 
-// Evenement Section
+// ==================================
+//        Evenement Section
+// ==================================
+
 .evenement__textbox {
   width: min(100%, rem(800px));
 }
@@ -239,48 +201,4 @@
   display: flex;
   flex-direction: column;
   gap: rem(32px);
-}
-
-.evenement-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: rem(32px);
-
-  &__img {
-    width: min(100%, rem(500px));
-    height: rem(250px);
-
-    border: $border-md;
-    box-shadow: $box-shadow-medium;
-
-    @include media-queries(md) {
-      height: rem(300px);
-    }
-  }
-
-  & .evenement-card__textbox {
-    width: min(100%, rem(520px));
-
-    & > * + * {
-      margin-block-start: rem(8px);
-    }
-  }
-
-  &--btn {
-    width: min(100%, rem(240px));
-    padding-block: rem(10px);
-  }
-
-  @include media-queries(md) {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-.evenement--btn {
-  width: min(100%, rem(200px));
-  padding: rem(12px) 0 rem(10px);
-  margin-block-start: rem(40px);
-  margin-inline: auto;
 }

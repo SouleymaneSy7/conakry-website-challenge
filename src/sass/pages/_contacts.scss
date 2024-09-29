@@ -3,12 +3,25 @@
 .contact-main {
   padding-block-start: rem(64px);
   padding-block-end: rem(56px);
+
+  & section:not(.contact__accordion) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include media-queries(lg) {
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
 }
 
 .contact__flex {
   display: flex;
   flex-direction: column;
   gap: rem(84px);
+  width: 100%;
 
   margin-block-start: rem(48px);
 
@@ -25,62 +38,8 @@
   }
 }
 
-.contact__form {
-  width: min(100%, rem(500px));
-  margin-inline: auto;
-
-  & > * {
-    width: 100%;
-  }
-
-  & > * + * {
-    margin-block-start: rem(18px);
-  }
-
-  &__flex {
-    display: flex;
-    gap: rem(12px);
-  }
-
-  &__text-area {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    & textarea {
-      width: 100%;
-      height: rem(300px);
-      border: $border-sm;
-      border-radius: 0;
-      resize: none;
-
-      &:is(:focus, :focus-visible, :focus-within) {
-        border-radius: 0;
-      }
-    }
-  }
-
-  &--btn {
-    padding-block: rem(12px);
-  }
-
-  &--errors {
-    font-size: $font-size-300;
-    font-weight: $font-weight-bold;
-    color: red;
-  }
-}
-
-.contact__form--success {
-  width: min(100%, rem(580px));
-  height: rem(448px);
-
-  display: grid;
-  place-items: center;
-}
-
 .contact__map {
-margin-inline: auto;
+  margin-inline: auto;
 
   width: min(100%, rem(500px));
   height: rem(300px);
@@ -100,7 +59,7 @@ margin-inline: auto;
 
 .contact__accordion {
   width: min(100%, rem(650px));
-  margin: 0;
+  margin: 0 auto;
 
   & h2 {
     margin-block-end: rem(24px);
@@ -135,5 +94,9 @@ margin-inline: auto;
 
   & .accordion__body {
     padding: rem(12px);
+  }
+
+  @include media-queries(lg) {
+    margin: 0;
   }
 }

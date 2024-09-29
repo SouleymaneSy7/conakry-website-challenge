@@ -4,40 +4,33 @@
 .destination__flex {
   display: flex;
   flex-direction: column;
-  gap: rem(32px);
+  align-items: center;
+  gap: rem(48px);
+
+  text-align: center;
 
   @include media-queries(md) {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+
+    text-align: left;
   }
 }
 
-.destination-header {
-  & .destination-header__textbox {
-    width: min(100%, rem(600px));
-  }
+.destination-header__textbox {
+  width: min(100%, rem(600px));
 
-  p {
+  & p {
     margin-block-start: min(rem(24px), 2.222vh);
   }
+}
 
-  button {
-    width: min(100%, rem(270px));
-    box-shadow: $box-shadow-medium;
+.destination-header__img {
+  width: min(100%, rem(500px));
+  height: rem(400px);
 
-    padding: rem(12px) 0 rem(10px);
-
-    margin-block-start: min(rem(40px), 2.222vh);
-  }
-
-  & .destination-header__img {
-    width: min(100%, rem(500px));
-    height: rem(400px);
-
-    border: $border-sm;
-    box-shadow: $box-shadow-medium;
-  }
+  border: $border-sm;
+  box-shadow: $box-shadow-medium;
 }
 
 .destination-main {
@@ -83,9 +76,9 @@
   }
 }
 
-.destination__nature {
-  background-color: purple;
-}
+// .destination__nature {
+//   background-color: purple;
+// }
 
 // .destination__culture {
 //   background-color: salmon;
@@ -117,66 +110,5 @@
 
   & > * {
     flex: 1 1 var(--card-width);
-  }
-
-  & .card {
-    width: min(100%, var(--card-width));
-
-    border: $border-sm;
-    box-shadow: $box-shadow-medium;
-    background-color: var(--light-clr);
-
-    padding: rem(20px);
-
-    &__img {
-      width: 100%;
-      height: rem(250px);
-      border: $border-sm;
-
-      margin-block-end: rem(20px);
-
-      & img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-        aspect-ratio: 16 / 9;
-      }
-    }
-
-    &__description {
-      margin-block-start: rem(4px);
-    }
-
-    &__flex {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    &--btn {
-      border: $border-sm;
-      box-shadow: none;
-
-      padding: rem(10px) rem(32px) rem(6px);
-      margin-block-start: rem(16px);
-    }
-  }
-}
-
-.destination--btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-block-start: rem(24px);
-
-  & button {
-    width: 100%;
-
-    padding: rem(12px) 0 rem(10px);
-
-    @include media-queries(sm) {
-      width: rem(245px);
-    }
   }
 }

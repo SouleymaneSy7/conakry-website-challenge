@@ -22,3 +22,7 @@
     @error 'the keyword #{$size} is not in the $breakpoints map';
   }
 }
+
+@mixin x-fluid-width($max-size) {
+  width: min(100%, $max-size);
+}

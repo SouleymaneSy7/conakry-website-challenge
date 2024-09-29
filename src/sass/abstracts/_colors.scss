@@ -3,6 +3,13 @@ $footer-bg-color: hsl(218, 21%, 15%);
 $footer-accent-color: hsl(162, 53%, 76%);
 $white-color: hsl(0, 0%, 100%);
 $black-color: hsl(0, 0%, 0%);
+$primary-clr: hsl(271, 37%, 68%);
+$primary-accent-clr: hsl(273, 85%, 89%);
+$primary-accent-low-clr: hsl(180, 33%, 93%);
+$section-one-clr: hsl(133, 31%, 62%);
+$section-two-clr: hsl(185, 52%, 49%);
+$section-three-clr: hsl(273, 31%, 62%);
+$section-four-clr: hsl(360, 100%, 75%);
 
 $colors: (
   body-bg: $body-bg-color,
@@ -10,4 +17,11 @@ $colors: (
   footer-title: $footer-accent-color,
   light: $white-color,
   dark: $black-color,
+  primary: $primary-clr,
+  primary-accent: $primary-accent-clr,
+  primary-low-accent: $primary-accent-low-clr,
+  section-one-bg: $section-one-clr,
+  section-two-bg: $section-two-clr,
+  section-three-bg: $section-three-clr,
+  section-four-bg: $section-four-clr,
 );

@@ -4,6 +4,7 @@
   padding-block-start: spacing(12);
   padding-block-end: spacing(9);
 
+
   & .history__intro > * + * {
     margin-block-start: min(rem(32px), 2.222vh);
   }
@@ -19,36 +20,14 @@
   & img {
     margin-block-start: rem(40px);
   }
-
-  & .history--btn {
-    background-color: yellow;
-
-    padding: rem(12px) rem(48px) rem(10px);
-    margin-block-start: rem(40px);
-  }
-
-  & .history__link {
-    position: relative;
-    display: block;
-
-    font-weight: $font-weight-bold;
-    color: $text-color-default;
-    text-decoration: underline;
-
-    margin-block-start: rem(16px);
-
-    & .link__icon {
-      display: inline-block;
-      rotate: 45deg;
-
-      width: rem(24px);
-      height: rem(24px);
-
-      margin-block-start: rem(-5px);
-    }
-  }
 }
 
-.footer {
-  display: none;
+.history__link {
+  display: block;
+  
+  font-weight: $font-weight-bold;
+  color: $text-color-default;
+  text-decoration: underline;
+
+  margin-block-start: rem(16px);
 }

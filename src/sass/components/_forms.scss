@@ -1,0 +1,70 @@
+@use "../abstracts/" as *;
+
+.contact__form {
+  width: min(100%, rem(500px));
+  margin-inline: auto;
+
+  & > * {
+    width: 100%;
+  }
+
+  & > * + * {
+    margin-block-start: rem(18px);
+  }
+
+  &__flex {
+    display: flex;
+    gap: rem(12px);
+  }
+
+  &__text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & textarea {
+      width: 100%;
+      height: rem(300px);
+      border: $border-sm;
+      border-radius: 0;
+      resize: none;
+
+      &:is(:focus, :focus-visible, :focus-within) {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &--errors {
+    font-size: $font-size-300;
+    font-weight: $font-weight-bold;
+    color: red;
+  }
+}
+
+.contact__form--success {
+  width: min(100%, rem(580px));
+  height: rem(448px);
+
+  display: grid;
+  place-items: center;
+}
+
+.footer__newsletter__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(12px);
+
+  margin-block: rem(20px);
+
+  &__input {
+    --input-clr: transparent;
+    border: 2px solid var(--input-clr);
+
+    transition: border 250ms ease-in-out;
+
+    &:is(:focus, :focus-visible) {
+      --input-clr: var(--footer-title-clr);
+    }
+  }
+}
