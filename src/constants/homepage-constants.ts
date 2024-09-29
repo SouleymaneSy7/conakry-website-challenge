@@ -4,6 +4,17 @@ import {
   TwitterIcon,
   YoutubeIcon,
 } from "@/icons/Icons.component";
+import {
+  another,
+  bookImg,
+  fashionWeek,
+  festival,
+  heroImg,
+  IleImg,
+  independanceImg,
+  PalmCamayeneImg,
+  plageRogbaneImg,
+} from "./images-constants";
 
 // Types
 export type NavBarListTypes = {
@@ -15,6 +26,7 @@ export type NavBarListTypes = {
 export type HeroSectionTypes = {
   heroTitle: string;
   heroBtnText: string;
+  heroImage: string;
 };
 
 export type ExploreSectionType = {
@@ -24,6 +36,7 @@ export type ExploreSectionType = {
 
 export type ExploreCardsTypes = {
   id: number;
+  cardImage: string;
   cardTitle: string;
   cardDescription: string;
   cardBtn: string;
@@ -58,6 +71,7 @@ export type EvenementSectionTypes = {
 
 export type EvenementCardsType = {
   id: number;
+  evenementCardImg: string;
   evenementCardTitle: string;
   evenementCardDate: string;
   evenementCardDescription: string;
@@ -108,7 +122,7 @@ const heroSection: HeroSectionTypes = {
   heroTitle:
     "Plongez au coeur de la culture africaine - Conakry, un berceau de traditions et de créativité.",
   heroBtnText: "Explorer les attractions touristiques",
-  // heroImage: heroImg,
+  heroImage: heroImg,
 };
 
 // Explore Section
@@ -121,23 +135,15 @@ const exploreSection: ExploreSectionType = {
 const exploreCards: ExploreCardsTypes = [
   {
     id: 11,
-    // cardImage: ,
+    cardImage: IleImg,
     cardTitle: "Îles de Loos",
     cardDescription:
       "L'archipel comprend trois îles : Tamara 'la sauvage', Room 'la tranquille' et Kassa 'la fêtarde'. Trois îles qu'il faut prendre le temps de découvrir tant leur beauté sauvage est préservée et la pêche, leur atout principal.",
     cardBtn: "Visiter",
   },
   {
-    id: 12,
-    // cardImage: ,
-    cardTitle: "Restaurant - Le Damier",
-    cardDescription:
-      "Un restaurant incontournable de Conakry offrant une cuisine variée, locale et internationale. Apprécié pour son cadre convivial et ses plats raffinés.",
-    cardBtn: "Visiter",
-  },
-  {
     id: 13,
-    // cardImage: ,
+    cardImage: PalmCamayeneImg,
     cardTitle: "Hôtel - Palm Camayenne",
     cardDescription:
       "Ce luxueux hôtel propose des chambres avec vue sur l’océan Atlantique, un spa, une piscine, et une gastronomie haut de gamme. Une véritable oasis en plein cœur de la ville.",
@@ -145,42 +151,10 @@ const exploreCards: ExploreCardsTypes = [
   },
   {
     id: 14,
-    // cardImage: ,
+    cardImage:plageRogbaneImg ,
     cardTitle: "Plage de Rogbané",
     cardDescription:
       "Située au nord de Conakry, cette plage est populaire pour ses magnifiques couchers de soleil et ses ambiances décontractées. Un lieu idéal pour les balades en bord de mer et les pique-niques.",
-    cardBtn: "Visiter",
-  },
-  {
-    id: 15,
-    // cardImage: ,
-    cardTitle: "Restaurant - Le Moulin",
-    cardDescription:
-      "Ce restaurant, situé en bord de mer, est célèbre pour ses fruits de mer frais et ses plats typiques guinéens. Le cadre pittoresque et les vues sur l'océan en font un lieu idéal pour un dîner romantique.",
-    cardBtn: "Visiter",
-  },
-  {
-    id: 16,
-    // cardImage: ,
-    cardTitle: "Parc de la Paix",
-    cardDescription:
-      "Un oasis de verdure au cœur de Conakry, idéal pour des promenades en famille, des pique-niques ou des activités de loisirs. Le parc est également un lieu de rassemblement pour divers événements culturels.",
-    cardBtn: "Visiter",
-  },
-  {
-    id: 17,
-    // cardImage: ,
-    cardTitle: "Plage de Taouyah",
-    cardDescription:
-      "Située à quelques kilomètres au sud de Conakry, la plage de Taouyah est prisée pour ses eaux cristallines et son ambiance calme. C'est un endroit parfait pour se détendre, nager et profiter de la nature.",
-    cardBtn: "Visiter",
-  },
-  {
-    id: 18,
-    // cardImage: ,
-    cardTitle: "Restaurant - Le Plaza",
-    cardDescription:
-      "Réputé pour ses plats raffinés et son service de qualité, Le Plaza propose une cuisine fusion mêlant saveurs locales et internationales. Son ambiance élégante en fait un lieu prisé pour les occasions spéciales.",
     cardBtn: "Visiter",
   },
 ];
@@ -278,7 +252,7 @@ const evenementSectionBtn = "Voir plus";
 const evenementCards: EvenementCardsType = [
   {
     id: 31,
-    // evenementCardImg: ,
+    evenementCardImg: independanceImg ,
     evenementCardTitle: "Anniversaire de l’Indépendance de la Guinée",
     evenementCardDate: "2 Octobre 2024",
     evenementCardDescription:
@@ -287,7 +261,7 @@ const evenementCards: EvenementCardsType = [
   },
   {
     id: 32,
-    // evenementCardImg: ,
+    evenementCardImg: bookImg,
     evenementCardTitle: "Salon International du Livre de Conakry (SILC)",
     evenementCardDate: "Novembre 2024",
     evenementCardDescription:
@@ -296,7 +270,7 @@ const evenementCards: EvenementCardsType = [
   },
   {
     id: 33,
-    // evenementCardImg: ,
+    evenementCardImg: festival,
     evenementCardTitle: "Festival National des Arts et de la Culture (FENAC)",
     evenementCardDate: "Mars 2025",
     evenementCardDescription:
@@ -305,7 +279,7 @@ const evenementCards: EvenementCardsType = [
   },
   {
     id: 34,
-    // evenementCardImg: ,
+    evenementCardImg: fashionWeek,
     evenementCardTitle: "Conakry Fashion Week",
     evenementCardDate: "Août 2025",
     evenementCardDescription:
