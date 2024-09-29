@@ -1,12 +1,11 @@
-// import React from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import ErrorsPage from "@/components/ErrorsPage";
 
 const NotFound = () => {
   return (
-    <div>
-      NotFound
-      <Link to={"/"}>Retourner sur la page d'accueil</Link>
-    </div>
+    <React.Fragment>
+      <ErrorsPage />
+    </React.Fragment>
   );
 };
 
