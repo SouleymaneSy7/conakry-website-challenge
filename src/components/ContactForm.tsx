@@ -23,7 +23,7 @@ const ContactForm = () => {
   const emailId = `${id}-email`;
   const messageId = `${id}-message`;
 
-  const emailRegEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const emailRegEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
   const handleNameError = () => {
     if (!firstName && !lastName) {
@@ -92,6 +92,7 @@ const ContactForm = () => {
                   onChange={(event) => {
                     setFirstName(event.target.value);
                   }}
+                  className={NameErrorMsg ? "errors" : ""}
                 />
               </div>
 
@@ -105,6 +106,7 @@ const ContactForm = () => {
                   onChange={(event) => {
                     setLastName(event.target.value);
                   }}
+                  className={NameErrorMsg ? "errors" : ""}
                 />
               </div>
             </div>
@@ -123,6 +125,7 @@ const ContactForm = () => {
               onChange={(event) => {
                 setEmail(event.target.value);
               }}
+              className={emailErrorMsg ? "errors" : ""}
             />
 
             <small className="contact__form--errors">{emailErrorMsg}</small>
@@ -130,9 +133,7 @@ const ContactForm = () => {
 
           <div className="contact__form__text-area-container">
             <Container as={"div"} className="contact__form__text-area">
-              <label htmlFor={messageId}>
-                Message <span>*</span>
-              </label>
+              <label htmlFor={messageId}>Message</label>
 
               <textarea
                 id={messageId}
@@ -141,13 +142,18 @@ const ContactForm = () => {
                 onChange={(event) => {
                   setMessage(event.target.value);
                 }}
+                className={messageErrorMsg ? "errors" : ""}
               ></textarea>
             </Container>
 
             <small className="contact__form--errors">{messageErrorMsg}</small>
           </div>
 
-          <Button type="submit" aria-label="submit" className="contact__form--btn">
+          <Button
+            type="submit"
+            aria-label="submit"
+            className="contact__form--btn"
+          >
             Envoyer
           </Button>
         </Forms>
