@@ -1,34 +1,37 @@
+import Title from "./Title";
 import Button from "./Buttons";
 import Container from "./Container";
+import VisuallyHidden from "./VisuallyHidden";
 
 import { exploreCards, exploreSection } from "@/constants/homepage-constants";
 
 const HomeMainExploreSection = () => {
   return (
     <Container as={"section"} className="explore-section">
-      <div className="container">
+      <Container className="container">
         <div className="explore__flex">
           <div className="explore__textbox">
-            <h2>{exploreSection.explorerTitle}</h2>
+            <Title level="h2">{exploreSection.explorerTitle}</Title>
             <p>{exploreSection.explorerDescription}</p>
           </div>
 
           <div className="explore--btn-container">
             <Button type="button" className="explore--btn">
               Left
+              <VisuallyHidden>Swipper vers la gauche</VisuallyHidden>
             </Button>
 
             <Button type="button" className="explore--btn">
-              right
+              Right
+              <VisuallyHidden>Swipper vers la droite</VisuallyHidden>
             </Button>
           </div>
         </div>
 
-        <Container
-          as={"div"}
+        <div
           className="explore-card-wrapper"
           role="region"
-          aria-label="Carousel de Conakry"
+          aria-label="Carousel des Endroits de Conakry"
         >
           <div className="explore-card-container">
             {exploreCards.map((card) => {
@@ -45,7 +48,10 @@ const HomeMainExploreSection = () => {
                     /> */}
                   </div>
 
-                  <h3 className="explore-card__title">{card.cardTitle}</h3>
+                  <Title level="h3" className="explore-card__title">
+                    {card.cardTitle}
+                  </Title>
+
                   <p className="explore-card__description">
                     {card.cardDescription}
                   </p>
@@ -59,8 +65,8 @@ const HomeMainExploreSection = () => {
               );
             })}
           </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </Container>
   );
 };

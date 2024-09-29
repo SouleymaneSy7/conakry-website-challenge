@@ -6,7 +6,7 @@ import HomeMainExploreSection from "./HomeMainExploreSection";
 
 const HomeMain = () => {
   return (
-    <Container as="main" className="home-main">
+    <Container as="main" role="main" className="home-main">
       <HomeMainExploreSection />
       <HomeMainDiscoverSection />
       <HomeMainCommuneSection />

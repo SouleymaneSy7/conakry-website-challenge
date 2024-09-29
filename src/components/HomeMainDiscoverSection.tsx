@@ -1,11 +1,13 @@
-import { discoverSection } from "@/constants/homepage-constants";
+import Title from "./Title";
 import Container from "./Container";
+
+import { discoverSection } from "@/constants/homepage-constants";
 
 const HomeMainDiscoverSection = () => {
   return (
     <Container as={"section"} className="discover-section | container">
       <div className="discover__textbox">
-        <h2> {discoverSection.discoverTitle} </h2>
+        <Title level="h2"> {discoverSection.discoverTitle} </Title>
         <p> {discoverSection.discoverDescription}</p>
       </div>
 

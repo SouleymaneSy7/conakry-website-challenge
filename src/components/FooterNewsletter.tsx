@@ -1,8 +1,10 @@
+import Title from "./Title";
 import Forms from "./Forms";
 import Inputs from "./Inputs";
 import Button from "./Buttons";
-import { footerNewsletter } from "@/constants/homepage-constants";
 import FooterSocial from "./FooterSocial";
+
+import { footerNewsletter } from "@/constants/homepage-constants";
 
 const FooterNewsletter = () => {
   const {
@@ -14,7 +16,7 @@ const FooterNewsletter = () => {
 
   return (
     <div className="footer__newsletter">
-      <h3>{newsletterTitle}</h3>
+      <Title level="h4">{newsletterTitle}</Title>
       <p>{newsletterDescription}</p>
 
       <Forms className="footer__newsletter__form">
@@ -23,7 +25,11 @@ const FooterNewsletter = () => {
           placeholder={newsletterInputPlaceholder}
           className="footer__newsletter__form__input"
         />
-        <Button type="submit" className="footer__newsletter__form--btn">
+        <Button
+          type="submit"
+          aria-label="submit"
+          className="footer__newsletter__form--btn"
+        >
           {newsletterBtn}
         </Button>
       </Forms>

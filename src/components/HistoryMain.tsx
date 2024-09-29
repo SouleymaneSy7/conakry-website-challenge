@@ -1,19 +1,26 @@
+import Title from "./Title";
 import Button from "./Buttons";
 import Container from "./Container";
+
 import { historyIntroduction } from "@/constants/history-page-constants";
 
 const HistoryMain = () => {
   const { historyTitle, historyIntro } = historyIntroduction;
 
   return (
-    <Container as={"main"} className="history-main | container">
+    <Container
+      as={"main"}
+      role="main"
+      id="main-content"
+      className="history-main | container"
+    >
       <div className="history__intro">
-        <h1>{historyTitle}</h1>
+        <Title level="h1">{historyTitle}</Title>
         <p>{historyIntro}</p>
       </div>
 
       <div>
-        <h2>Étymologie</h2>
+        <Title level="h2">Étymologie</Title>
         <p>
           Selon une légende, à l'origine, il y avait dans l'
           <a href="#">
@@ -49,7 +56,7 @@ const HistoryMain = () => {
       </div>
 
       <div>
-        <h2>Situation</h2>
+        <Title level="h2">Situation</Title>
 
         <p>
           Située au sud-ouest de la Guinée, sur la presqu'
@@ -95,7 +102,7 @@ const HistoryMain = () => {
       </div>
 
       <div>
-        <h2>Histoire</h2>
+        <Title level="h2">Histoire</Title>
         <p>
           Le territoire où se trouve Conakry appartenait au{" "}
           <a href="#">
@@ -170,7 +177,7 @@ const HistoryMain = () => {
       </div>
 
       <div>
-        <h2>Période post-coloniale et indépendance</h2>
+        <Title level="h2">Période post-coloniale et indépendance</Title>
 
         <p>
           Après la Seconde Guerre mondiale, la lutte pour l’indépendance en
@@ -225,7 +232,7 @@ const HistoryMain = () => {
       </div>
 
       <div>
-        <h2>Les années de transformation post-Sékou Touré</h2>
+        <Title level="h2">Les années de transformation post-Sékou Touré</Title>
         <p>
           Après la mort de Sékou Touré en{" "}
           <a href="#">
@@ -265,7 +272,7 @@ const HistoryMain = () => {
       </div>
 
       <div>
-        <h2>Conakry dans l’ère moderne</h2>
+        <Title level="h2">Conakry dans l’ère moderne</Title>
         <p>
           Aujourd'hui, Conakry est une métropole où se mélangent les influences{" "}
           <a href="#">
@@ -320,7 +327,7 @@ const HistoryMain = () => {
       </div>
 
       <div>
-        <h2>Les défis contemporains et l'avenir de Conakry</h2>
+        <Title level="h2">Les défis contemporains et l'avenir de Conakry</Title>
 
         <p>
           Malgré son dynamisme, Conakry fait face à de nombreux défis, notamment

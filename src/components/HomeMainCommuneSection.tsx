@@ -1,10 +1,12 @@
 import React from "React";
 
-import { communeSection, communeSlider } from "../constants/homepage-constants";
-
+import Title from "./Title";
 import Button from "./Buttons";
 import Container from "./Container";
+import VisuallyHidden from "./VisuallyHidden";
 import LeafletMapContainer from "./LeafletMapContainer";
+
+import { communeSection, communeSlider } from "../constants/homepage-constants";
 
 const HomeMainCommuneSection = () => {
   const [currentIndex, setCurrentIndex] = React.useState(0);
@@ -23,34 +25,53 @@ const HomeMainCommuneSection = () => {
 
   return (
     <Container as={"section"} className="commune-section">
-      <div className="container">
+      <Container className="container">
         <div className="commune__textbox">
-          <h2>{communeSection.communeTitle}</h2>
+          <Title level="h2">{communeSection.communeTitle}</Title>
           <p>{communeSection.communeDescription}</p>
         </div>
 
         <div className="commune__flex">
           <Container as={"div"} className="commune__card-container">
             <Container as={"article"}>
-              <h3>{communeSlider[currentIndex].sliderTitle}</h3>
+              <Title level="h3">
+                {communeSlider[currentIndex].sliderTitle}
+              </Title>
               <p>{communeSlider[currentIndex].sliderDescription}</p>
             </Container>
 
             <div className="commune__card-btn-container">
-              <Button type="button" className="commune--btn" onClick={prevHandler}>
+              <Button
+                type="button"
+                className="commune--btn"
+                onClick={prevHandler}
+                aria-label="Précédent"
+              >
                 {"<"}
+                <VisuallyHidden>Précédent</VisuallyHidden>
               </Button>
-              <Button type="button" className="commune--btn" onClick={nextHandler}>
+
+              <Button
+                type="button"
+                className="commune--btn"
+                onClick={nextHandler}
+                aria-label="Suivant"
+              >
                 {">"}
+                <VisuallyHidden>Suivant</VisuallyHidden>
               </Button>
             </div>
           </Container>
 
-          <div className="commune__map">
+          <div
+            className="commune__map"
+            aria-label="Carte interactive de Conakry"
+          >
             <LeafletMapContainer />
+            <VisuallyHidden>Carte interactive de Conakry</VisuallyHidden>
           </div>
         </div>
-      </div>
+      </Container>
     </Container>
   );
 };

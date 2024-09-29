@@ -7,6 +7,7 @@ import FooterElements from "./FooterElements";
 import FooterNewsletter from "./FooterNewsletter";
 import FooterAttribution from "./FooterAttribution";
 import { FooterLogo } from "@/icons/Icons.component";
+import VisuallyHidden from "./VisuallyHidden";
 
 const Footer = () => {
   return (
@@ -15,6 +16,7 @@ const Footer = () => {
         <div className="footer__top">
           <Link to={"/"} className="footer__logo">
             <FooterLogo />
+            <VisuallyHidden>Logo du site web de Conakry</VisuallyHidden>
           </Link>
           <FooterElements />
           <FooterNewsletter />

@@ -1,3 +1,4 @@
+import VisuallyHidden from "./VisuallyHidden";
 import { footerSocialIcons } from "@/constants/homepage-constants.ts";
 
 const FooterSocial = () => {
@@ -7,6 +8,7 @@ const FooterSocial = () => {
         <li key={index}>
           <a href="#">
             <Icon fill="var(--light-clr)" />
+            <VisuallyHidden>Icone de Reseaux socials</VisuallyHidden>
           </a>
         </li>
       ))}

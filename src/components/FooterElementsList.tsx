@@ -1,5 +1,6 @@
 import React from "react";
 
+import Title from "./Title";
 import { FooterLinksTypes } from "@/constants/homepage-constants";
 
 type FooterElementsListPropsTypes = {
@@ -12,9 +13,9 @@ const FooterElementsList = ({ linkList }: FooterElementsListPropsTypes) => {
       {linkList.map((linkListItem) => {
         return (
           <div key={linkListItem.id} className="footer__link-elements">
-            <h3 className="footer__link-elements__title">
+            <Title level="h4" className="footer__link-elements__title">
               {linkListItem.linkTitle}
-            </h3>
+            </Title>
 
             <ul role="list">
               {linkListItem.linkList.map((subItem, index) => {

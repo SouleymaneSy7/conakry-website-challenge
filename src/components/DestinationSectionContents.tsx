@@ -1,7 +1,10 @@
-import { destinationContents } from "@/constants/destination-page-constants";
-import Container from "./Container";
-import Button from "./Buttons";
 import React from "react";
+
+import Title from "./Title";
+import Button from "./Buttons";
+import Container from "./Container";
+
+import { destinationContents } from "@/constants/destination-page-constants";
 
 const DestinationSectionContents = () => {
   return (
@@ -16,7 +19,7 @@ const DestinationSectionContents = () => {
             <div className="container">
               <div className="destination__flex">
                 <div className="destination__text">
-                  <h2>{content.title}</h2>
+                  <Title level="h2">{content.title}</Title>
                   <p>{content.description}</p>
                 </div>
 
@@ -36,7 +39,9 @@ const DestinationSectionContents = () => {
                         /> */}
                       </div>
 
-                      <h3 className="card__title">{card.cardTitle}</h3>
+                      <Title level="h3" className="card__title">
+                        {card.cardTitle}
+                      </Title>
                       <p className="card__description">
                         {card.cardDescription}
                       </p>

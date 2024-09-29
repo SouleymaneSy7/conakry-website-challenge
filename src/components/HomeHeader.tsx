@@ -6,7 +6,12 @@ const HomeHeader = () => {
   const { heroTitle, heroBtnText } = heroSection;
 
   return (
-    <Container as="header" className="home-header | container">
+    <Container
+      as="header"
+      id="main-content"
+      className="home-header | container"
+      role="banner"
+    >
       <HomeHeroSection heroTitle={heroTitle} heroBtnText={heroBtnText} />
     </Container>
   );

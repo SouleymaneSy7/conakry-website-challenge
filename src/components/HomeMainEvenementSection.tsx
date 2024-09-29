@@ -1,15 +1,17 @@
+import Title from "./Title";
+import Button from "./Buttons";
+import Container from "./Container";
+
 import {
   evenementSection,
   evenementCards,
 } from "@/constants/homepage-constants";
-import Container from "./Container";
-import Button from "./Buttons";
 
 const HomeMainEvenementSection = () => {
   return (
     <Container as={"section"} className="evenement-section | container">
       <div className="evenement__textbox">
-        <h2>{evenementSection.evenementTitle}</h2>
+        <Title level="h2">{evenementSection.evenementTitle}</Title>
         <p>{evenementSection.evenementDescription}</p>
       </div>
 
@@ -22,9 +24,9 @@ const HomeMainEvenementSection = () => {
               </div>
 
               <div className="evenement-card__textbox">
-                <h3 className="evenement-card__title">
+                <Title level="h3" className="evenement-card__title">
                   {card.evenementCardTitle}
-                </h3>
+                </Title>
                 <p className="evenement-card__date">
                   <strong>Date:</strong> {card.evenementCardDate}
                 </p>

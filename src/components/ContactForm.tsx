@@ -70,7 +70,12 @@ const ContactForm = () => {
   return (
     <React.Fragment>
       {success ? (
-        <Container as={"div"} className="contact__form--success">
+        <Container
+          as={"div"}
+          role="alert"
+          aria-live="assertive"
+          className="contact__form--success"
+        >
           <p>Merci pour ton message ! Nous te répondrons bientôt ! 🎉</p>
         </Container>
       ) : (
@@ -113,6 +118,7 @@ const ContactForm = () => {
               label="Adresse e-mail "
               type="email"
               placeholder="johndoe@email.com"
+              aria-invalid={email ? "true" : "false"}
               value={email}
               onChange={(event) => {
                 setEmail(event.target.value);
@@ -131,6 +137,7 @@ const ContactForm = () => {
               <textarea
                 id={messageId}
                 value={message}
+                aria-invalid={message ? "true" : "false"}
                 onChange={(event) => {
                   setMessage(event.target.value);
                 }}
@@ -140,7 +147,7 @@ const ContactForm = () => {
             <small className="contact__form--errors">{messageErrorMsg}</small>
           </div>
 
-          <Button type="submit" className="contact__form--btn">
+          <Button type="submit" aria-label="submit" className="contact__form--btn">
             Envoyer
           </Button>
         </Forms>

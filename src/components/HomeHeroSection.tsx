@@ -1,12 +1,14 @@
-import { type HeroSectionTypes } from "@/constants/homepage-constants";
-import Container from "./Container";
+import Title from "./Title";
 import Button from "./Buttons";
+import Container from "./Container";
+
+import { type HeroSectionTypes } from "@/constants/homepage-constants";
 
 const HomeHeroSection = ({ heroTitle, heroBtnText }: HeroSectionTypes) => {
   return (
     <Container as={"section"} className="hero-section">
       <div className="hero-section__textbox">
-        <h1 className="heading-1">{heroTitle}</h1>
+        <Title level="h1" className="heading-1">{heroTitle}</Title>
         <Button type="button" className="hero-section--btn">
           {heroBtnText}
         </Button>

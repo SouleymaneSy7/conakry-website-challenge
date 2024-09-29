@@ -1,4 +1,5 @@
 import React from 'react';
+
 import FooterElementsList from "./FooterElementsList";
 import { footerLinks } from "@/constants/homepage-constants";
 

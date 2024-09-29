@@ -2,6 +2,7 @@ import React from "react";
 
 import Button from "./Buttons";
 import Container from "./Container";
+import Title from "./Title";
 
 type ContactFAQAccordionPropsType = {
   question: string;
@@ -29,7 +30,7 @@ const ContactFAQAccordion = ({
           isExpanded ? "accordion__header active" : "accordion__header"
         }
       >
-        <h4>
+        <Title level="h4">
           <Button
             type="button"
             id={FAQQuestionId}
@@ -40,7 +41,7 @@ const ContactFAQAccordion = ({
             <span>{question}</span>
             {/* Icons */}
           </Button>
-        </h4>
+        </Title>
       </div>
 
       <div
