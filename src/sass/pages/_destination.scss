@@ -76,29 +76,25 @@
   }
 }
 
-// .destination__nature {
-//   background-color: purple;
-// }
+.destination__nature {
+  background-color: var(--section-one-bg-clr);
+}
 
-// .destination__culture {
-//   background-color: salmon;
-// }
+.destination__culture {
+  background-color: var(--section-two-bg-clr);
+}
 
-// .destination__evenement {
-//   background-color: salmon;
-// }
+.destination__evenement {
+  background-color: var(--section-three-bg-clr);
+}
 
-// .destination__gastronomy {
-//   background-color: salmon;
-// }
+.destination__gastronomy {
+  background-color: var(--section-four-bg-clr);
+}
 
-// .destination__adventure {
-//   background-color: greenyellow;
-// }
-
-// .destination__nocturne {
-//   background-color: salmon;
-// }
+.destination__adventure {
+  background-color: var(--section-one-bg-clr);
+}
 
 .destination__cards-container {
   display: flex;
